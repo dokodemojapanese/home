@@ -2,35 +2,353 @@
 <html lang="my">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dokodemo – どこでも日本語</title>
-<meta name="description" content="Dokodemo – A Japanese Learning Platform for Burmese Learners. Learn Japanese Anywhere. Anytime.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dokodemo – どこでも日本語 | Learn Japanese. Anywhere • Anytime.</title>
+<meta name="description" content="Dokodemo – A Japanese Learning Platform for Burmese Learners. Hiragana to JLPT N1, 19,000+ dialog lines, 14,500+ word dictionary, 2,610 kanji, mock exams. Myanmar / 日本語 / English.">
 <meta property="og:title" content="Dokodemo – どこでも日本語">
-<meta property="og:description" content="Learn Japanese Anywhere. Anytime. A Japanese Learning Platform for Burmese Learners.">
-<meta property="og:image" content="https://dokodemojapanese.github.io/og-image.jpg">
+<meta property="og:description" content="Learn Japanese. Anywhere • Anytime. A Japanese Learning Platform for Burmese Learners.">
+<meta property="og:image" content="https://dokodemonihongo.com/hero.jpg">
 <meta property="og:url" content="https://dokodemonihongo.com/">
-<link rel="icon" href="https://dokodemojapanese.github.io/icon-192.png">
-<link rel="canonical" href="https://dokodemojapanese.github.io/">
+<meta name="theme-color" content="#14223D">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://dokodemojapanese.github.io/apple-touch-icon.png">
 <script>
-(function(){
-  var APP='https://dokodemojapanese.github.io';
-  var p=location.pathname||'/';
-  location.replace(APP+p+location.search+location.hash);
-})();
+/* App links (?ref= ?dq= ?tab= …) belong to the app */
+(function(){var q=location.search;if(/[?&](ref|dq|tab|src|migrate)=/.test(q)||/#migrate=/.test(location.hash)){location.replace('https://dokodemojapanese.github.io/'+q+location.hash)}})();
 </script>
 <style>
-html,body{margin:0;height:100%;background:#fff;font-family:-apple-system,system-ui,sans-serif;color:#14223D}
-.w{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
-.l{font-size:34px;font-weight:800;letter-spacing:.5px}
-.l span{display:inline-block;width:.62em;height:.62em;border-radius:50%;background:#D93A2E;vertical-align:.02em;margin:0 .02em}
-a{color:#1E6FD9;font-size:15px}
+:root{--navy:#14223D;--navy2:#1F3A68;--red:#E3262B;--gold:#FFD21F;--bg:#F5F7FC;--ink:#14223D;--mute:#5B6578}
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Noto Sans Myanmar","Myanmar Text",system-ui,sans-serif;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.sun{display:inline-block;width:.66em;height:.66em;border-radius:50%;background:var(--red);vertical-align:-.02em;margin:0 .04em}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 2px 14px rgba(20,34,61,.08)}
+.hd{display:flex;align-items:center;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand .ic{width:52px;height:52px;border-radius:13px;overflow:hidden;box-shadow:0 4px 10px rgba(20,34,61,.25)}
+.brand b{display:block;font-size:28px;line-height:1;font-weight:900;letter-spacing:.3px;color:var(--navy)}
+.brand small{display:block;font-size:15px;color:var(--navy);font-weight:700;margin-top:3px}
+.slogan{border-left:1px solid #D5DBE7;padding-left:16px;font-style:italic;color:var(--navy2);font-size:14px;white-space:nowrap}
+nav.menu{margin-left:auto;display:flex;align-items:center;gap:4px}
+nav.menu a{white-space:nowrap;display:flex;align-items:center;gap:6px;padding:8px 11px;border-radius:10px;font-weight:700;font-size:14px;color:var(--navy)}
+nav.menu i{display:flex;color:#1E5BD8}nav.menu a.on i{color:#fff}nav.menu a:hover{background:#EEF2FA}
+nav.menu a.on{background:#1E5BD8;color:#fff;box-shadow:inset 0 -3px 0 var(--red)}
+.hbtn{display:flex;gap:8px;margin-left:6px}
+.hbtn a{padding:8px 14px;border-radius:10px;font-weight:800;font-size:14px;color:#fff;white-space:nowrap}
+.hbtn .lg{background:var(--navy)} .hbtn .rg{background:var(--red)}
+.lang{display:flex;gap:3px;margin-left:8px}
+.lang button{white-space:nowrap;border:1px solid #CFD6E4;background:#fff;color:var(--navy);border-radius:14px;padding:3px 8px;font-size:12px;font-weight:700;cursor:pointer}
+.lang button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.burger{display:none;margin-left:auto;border:0;background:#EEF2FA;border-radius:10px;width:42px;height:42px;font-size:20px;color:var(--navy)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:#0E2A78;color:#fff}
+.hero{background:linear-gradient(100deg,#0B2A86 0%,#123C9E 45%,#1D4FB8 100%)}
+.hero .art{position:absolute;right:0;top:0;bottom:0;width:100%;background:url(hero.jpg) calc(100% + 70px) center/auto 100% no-repeat}
+.hero .bl{position:absolute;left:0;top:0;bottom:0;width:90px;background:url(blossom.jpg) left center/cover no-repeat;-webkit-mask:linear-gradient(90deg,#000 55%,transparent);mask:linear-gradient(90deg,#000 55%,transparent);z-index:1}
+.hero:after{content:"";position:absolute;left:-5%;right:-5%;top:-38px;height:60px;background:#fff;border-radius:0 0 50% 50%;z-index:3}
+.hero .art:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0B2A86 0%,#0E2F92 calc(100% - 1170px),rgba(14,47,146,.6) calc(100% - 1060px),rgba(14,47,146,0) calc(100% - 930px))}
+.hero .in{position:relative;z-index:4;padding:70px 0 120px;max-width:700px}
+.petal{position:absolute;width:16px;height:12px;background:#FFB7CF;border-radius:12px 0;opacity:.85;z-index:1;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(-40px) rotate(0)}100%{transform:translateY(560px) rotate(300deg)}}
+.hero h1{margin:0;font-size:86px;line-height:1;font-weight:900;letter-spacing:.5px;text-shadow:0 4px 18px rgba(0,0,0,.25)}
+.hero h2{margin:6px 0 0;font-size:54px;text-shadow:0 3px 14px rgba(0,0,0,.3);line-height:1.08;font-weight:900;color:#fff}
+.hero h2 em{display:block;font-style:normal;color:var(--gold)}
+.hero p.lead{text-shadow:0 2px 8px rgba(0,0,0,.45);font-size:20px;font-weight:700;margin:18px 0 26px;opacity:.97}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:30px;padding:13px 26px;font-weight:800;font-size:17px;border:2px solid transparent;cursor:pointer}
+.btn.red{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(227,38,43,.45)}
+.btn.line{border-color:#fff;color:#fff;background:rgba(11,42,134,.55)}
+.btn.white{background:#fff;color:var(--navy)}
+
+/* ---------- feature strip ---------- */
+.strip{position:relative;z-index:5;margin:-62px auto 0;background:#fff;border-radius:22px;box-shadow:0 12px 34px rgba(20,34,61,.14);display:grid;grid-template-columns:repeat(6,1fr)}
+.strip div{display:flex;align-items:center;gap:12px;padding:20px 16px;border-right:1px solid #E6EAF2;font-size:14px;line-height:1.35;font-weight:600}
+.strip div:last-child{border-right:0}
+.strip i{flex:none;display:flex;font-size:34px;color:#1E5BD8}
+.strip small{display:block;color:var(--mute);font-weight:500}
+
+section{padding:46px 0 0}
+.ttl{text-align:center;font-size:30px;font-weight:900;margin:0 0 20px}
+.ttl:before,.ttl:after{content:"🌸";font-size:22px;margin:0 12px;vertical-align:2px}
+.levels{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.levels a{border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(20,34,61,.14);transition:transform .2s}
+.levels a:hover{transform:translateY(-4px)}
+.levels img{width:100%;height:auto}
+
+/* features + join */
+.fj{display:grid;grid-template-columns:1.75fr 1fr;gap:24px;align-items:end}
+.fh{border-left:5px solid var(--red);padding-left:12px;margin-bottom:14px}
+.fh h3{margin:0;font-size:26px;font-weight:900}
+.fh p{margin:0;color:var(--mute)}
+.feats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.feat{background:#fff;border:1px solid #E3E8F2;border-radius:16px;padding:16px 10px;text-align:center;box-shadow:0 4px 12px rgba(20,34,61,.05)}
+.feat i{display:flex;align-items:center;justify-content:center;font-style:normal;font-size:34px;height:44px;color:#1E5BD8;font-weight:900}
+.feat b{display:block;font-size:13.5px;margin-top:6px;line-height:1.3}
+.feat small{display:block;color:var(--mute);font-size:12px;line-height:1.4;margin-top:2px}
+.join{position:relative;background:linear-gradient(135deg,#EEF3FF,#F7F9FF);border:1px solid #DCE4F5;border-radius:20px;padding:26px 160px 26px 26px;min-height:170px;overflow:visible;display:flex;flex-direction:column;justify-content:center}
+.join h3{margin:0 0 4px;font-size:22px;font-weight:900}
+.join p{margin:0 0 16px;color:var(--mute)}
+.join img{position:absolute;right:-6px;bottom:0;width:165px;border-radius:0 0 18px 0;mix-blend-mode:multiply}
+
+/* tester */
+.tester{margin-top:26px;background:linear-gradient(135deg,#0E9F6E,#0B7A55);color:#fff;border-radius:22px;padding:24px;display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:center}
+.tester h3{margin:0 0 6px;font-size:24px;font-weight:900}
+.tester p{margin:0;opacity:.95}
+.tester ol{margin:0;padding:0;list-style:none;counter-reset:s}
+.tester li{counter-increment:s;background:rgba(255,255,255,.14);border-radius:14px;padding:10px 12px 10px 48px;margin-bottom:8px;position:relative;font-size:14.5px}
+.tester li:before{content:counter(s);position:absolute;left:12px;top:9px;width:26px;height:26px;border-radius:50%;background:#fff;color:#0B7A55;font-weight:900;display:flex;align-items:center;justify-content:center}
+.tester li a{font-weight:800;text-decoration:underline}
+.note{margin-top:10px;font-size:13.5px;background:rgba(0,0,0,.14);border-radius:12px;padding:8px 12px}
+
+/* how */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.how div{background:#fff;border:1px solid #E3E8F2;border-radius:16px;padding:18px}
+.how h4{margin:0 0 6px;font-size:17px}
+.how ol{margin:0;padding-left:20px;color:var(--mute);font-size:14px}
+
+/* footer */
+footer{margin-top:54px;background:var(--navy);color:#fff}
+.ft{display:flex;align-items:center;gap:22px;padding:22px 20px;flex-wrap:wrap}
+.ft .brand b{color:#fff;font-size:24px} .ft .brand small{color:#fff;font-size:13px;font-weight:500}
+.ft .slogan{color:#fff;border-color:rgba(255,255,255,.3)}
+.ft .links{margin-left:auto;align-items:center;display:flex;gap:16px;font-size:14px;flex-wrap:wrap}
+.soc{display:flex;gap:10px}
+.soc a{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff}
+.copyr{font-size:13px;opacity:.8}
+
+.ico{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.25em}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{border:1px solid #D5DCE8;background:#fff;color:var(--navy);border-radius:22px;padding:9px 16px;font-weight:800;font-size:15px;cursor:pointer}
+.tabs button em{font-style:normal;background:#EAF0FF;color:#1E5BD8;border-radius:10px;padding:0 7px;margin-left:4px;font-size:12px}
+.tabs button.on{background:#1E5BD8;color:#fff;border-color:#1E5BD8}.tabs button.on em{background:#fff}
+.pane{display:none;background:#fff;border:1px solid #E3E8F2;border-radius:20px;padding:18px}.pane.on{display:block}
+.pl{margin:0 0 12px;color:var(--mute);text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{display:inline-flex;align-items:center;gap:7px;background:#F5F7FC;border:1px solid #E3E8F2;border-radius:12px;padding:6px 11px;font-weight:700;font-size:14px}
+.chip b{display:flex;align-items:center;justify-content:center;min-width:26px;height:26px;border-radius:8px;background:#14223D;color:#fff;font-size:13px;padding:0 4px}
+.chip small{color:var(--mute);font-weight:500;font-size:12px}
+.sets{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sets div{display:flex;gap:10px;align-items:center;background:#F5F7FC;border-radius:12px;padding:10px 12px;font-size:14.5px}
+.sets b{flex:none;width:30px;height:30px;border-radius:9px;background:#EAF0FF;color:#1E5BD8;display:flex;align-items:center;justify-content:center}
+@media (max-width:860px){.sets{grid-template-columns:1fr}}
+[data-l]{display:none}
+body.l-my [data-l="my"],body.l-en [data-l="en"],body.l-ja [data-l="ja"]{display:revert}
+
+@media (max-width:1700px){.hd .slogan{display:none}}
+@media (max-width:1180px){nav.menu a span.t{display:none}}
+@media (min-width:861px) and (max-width:1300px){
+  .hero .art{background-position:calc(100% + 300px) center}
+  .hero .art:before{background:linear-gradient(90deg,#0B2A86 0%,rgba(14,47,146,.85) 35%,rgba(14,47,146,0) 62%)}
+  .hero h1{font-size:76px}.hero h2{font-size:46px}
+}
+@media (max-width:860px){
+  .hd{height:64px}
+  .brand .ic{width:44px;height:44px} .brand b{font-size:24px} .brand small{font-size:13px}
+  nav.menu,.hbtn{display:none}
+  .burger{display:block}
+  header.open nav.menu{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;padding:10px 16px 16px;box-shadow:0 10px 20px rgba(0,0,0,.1)}
+  header.open .hbtn{display:flex;position:absolute;top:calc(64px + 330px);left:16px;right:16px}
+  .lang{margin-left:0}
+  .hero .art{width:100%;opacity:.55;background-size:cover}
+  .hero .bl,.hero:after{display:none}
+  .hero .art:before{background:linear-gradient(180deg,rgba(14,42,120,.35),#0E2A78 92%)}
+  .hero .in{padding:40px 0 96px}
+  .hero h1{font-size:56px} .hero h2{font-size:34px} .hero p.lead{font-size:16px}
+  .strip{grid-template-columns:repeat(2,1fr);margin-top:-54px}
+  .strip div{border-bottom:1px solid #E6EAF2}
+  .levels{grid-template-columns:repeat(2,1fr)}
+  .levels a:last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 8px)}
+  .fj{grid-template-columns:1fr}
+  .feats{grid-template-columns:repeat(3,1fr)}
+  .tester,.how{grid-template-columns:1fr}
+  .join{padding:22px 20px 0;min-height:0}.join img{position:static;width:150px;margin:14px auto 0}
+}
 </style>
 </head>
-<body>
-<div class="w">
-  <div class="l">Dok<span></span>demo</div>
-  <div>どこでも日本語</div>
-  <a href="https://dokodemojapanese.github.io/">Dokodemo ကို ဖွင့်မယ် →</a>
+<body class="l-my">
+
+<header id="hd"><div class="wrap hd">
+  <a class="brand" href="#top">
+    <span class="ic"><img src="logo.svg" alt="Dokodemo"></span>
+    <span><b>Dok<span class="sun"></span>demo</b><small>どこでも日本語</small></span>
+  </a>
+  <span class="slogan">Learn Japanese. Anywhere • Anytime.</span>
+  <nav class="menu">
+    <a class="on" href="#top"><i data-i="home"></i> <span class="t">Home</span></a>
+    <a href="#levels"><i data-i="book"></i> <span class="t"><span data-l="my">သင်ခန်းစာ</span><span data-l="ja">コース</span><span data-l="en">Courses</span></span></a>
+    <a href="https://dokodemojapanese.github.io/?tab=words"><i data-i="search"></i> <span class="t"><span data-l="my">အဘိဓာန်</span><span data-l="ja">辞書</span><span data-l="en">Dictionary</span></span></a>
+    <a href="#all"><i data-i="check"></i> <span class="t">Quiz</span></a>
+    <a href="https://www.youtube.com/@DokodemoNihongo"><i data-i="play"></i> <span class="t">Video</span></a>
+    <a href="https://dokodemojapanese.github.io/"><i data-i="user"></i> <span class="t">My Learning</span></a>
+    <span class="lang"><button data-set="my" class="on">မြန်မာ</button><button data-set="ja">日本語</button><button data-set="en">EN</button></span>
+  </nav>
+  <span class="hbtn">
+    <a class="lg" href="https://dokodemojapanese.github.io/">Login</a>
+    <a class="rg" href="https://dokodemojapanese.github.io/">Register</a>
+  </span>
+  <button class="burger" id="bg" aria-label="menu">☰</button>
+</div></header>
+
+<div class="hero" id="top">
+  <div class="art"></div><div class="bl"></div>
+  <div class="wrap"><div class="in">
+    <h1>Dok<span class="sun"></span>demo</h1>
+    <h2>Learn Japanese.<em>Anywhere • Anytime.</em></h2>
+    <p class="lead">
+      <span data-l="my">မြန်မာလူမျိုးများအတွက် ဂျပန်စာ သင်ယူရေး app — ဟိရဂန ကနေ JLPT N1 အထိ၊ ကိုယ့်အရှိန်နဲ့ကိုယ် နေရာမရွေး လေ့လာနိုင်ပါတယ်။</span>
+      <span data-l="ja">ミャンマー人のための日本語学習アプリ。ひらがなからJLPT N1まで、自分のペースでどこでも。</span>
+      <span data-l="en">Your Japanese learning journey starts here.<br>Learn at your own pace, wherever you are.</span>
+    </p>
+    <div class="cta">
+      <a class="btn red" href="https://dokodemojapanese.github.io/">🚀 <span data-l="my">စလေ့လာမယ်</span><span data-l="ja">学習をはじめる</span><span data-l="en">Start Learning</span> →</a>
+      <a class="btn line" href="#levels">📖 <span data-l="my">သင်ခန်းစာများ ကြည့်မယ်</span><span data-l="ja">コースを見る</span><span data-l="en">Explore Courses</span> →</a>
+    </div>
+  </div></div>
 </div>
+
+<div class="wrap">
+  <div class="strip">
+    <div><i data-i="globe"></i><span>Multi-Language<small>မြန်မာ / 日本語 / English</small></span></div>
+    <div><i data-i="play"></i><span><span data-l="my">Video သင်ခန်းစာ</span><span data-l="ja">動画レッスン</span><span data-l="en">Video lessons</span><small>YouTube @DokodemoNihongo</small></span></div>
+    <div><i data-i="chart"></i><span>JLPT <span data-l="my">လေ့ကျင့်ခန်း</span><span data-l="ja">練習・模試</span><span data-l="en">Practice</span><small>N5 – N1</small></span></div>
+    <div><i data-i="dict"></i><span><span data-l="my">အဘိဓာန်</span><span data-l="ja">辞書</span><span data-l="en">Dictionary</span><small>14,500+ <span data-l="my">စကားလုံး</span><span data-l="ja">語</span><span data-l="en">words</span> · 2,610 漢字</small></span></div>
+    <div><i data-i="cloud"></i><span>Online &amp; Offline<small><span data-l="my">အင်တာနက်မရှိလည်း ရ</span><span data-l="ja">オフラインでも使える</span><span data-l="en">Works offline</span></small></span></div>
+    <div><i data-i="trophy"></i><span><span data-l="my">တိုးတက်မှု မှတ်တမ်း</span><span data-l="ja">進捗を記録</span><span data-l="en">Track progress</span><small>⭐ · streak · <span data-l="my">အဆင့်</span><span data-l="ja">ランキング</span><span data-l="en">ranking</span></small></span></div>
+  </div>
+
+  <section id="levels">
+    <h2 class="ttl">JLPT Levels</h2>
+    <div class="levels">
+      <a href="https://dokodemojapanese.github.io/"><img src="n5.jpg" alt="N5 Beginner"></a>
+      <a href="https://dokodemojapanese.github.io/"><img src="n4.jpg" alt="N4 Elementary"></a>
+      <a href="https://dokodemojapanese.github.io/"><img src="n3.jpg" alt="N3 Intermediate"></a>
+      <a href="https://dokodemojapanese.github.io/"><img src="n2.jpg" alt="N2 Advanced"></a>
+      <a href="https://dokodemojapanese.github.io/"><img src="n1.jpg" alt="N1 Proficiency"></a>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="fj">
+      <div>
+        <div class="fh"><h3>Our Features</h3><p><span data-l="my">ဂျပန်စာ ကျွမ်းကျင်ဖို့ လိုသမျှ အကုန်</span><span data-l="ja">日本語マスターに必要なすべて</span><span data-l="en">Everything you need to master Japanese</span></p></div>
+        <div class="feats">
+          <div class="feat"><i data-i="vocab"></i><b><span data-l="my">ဝေါဟာရ</span><span data-l="ja">語彙</span><span data-l="en">Vocabulary</span></b><small>N5–N1 · <span data-l="my">၃ ဘာသာ</span><span data-l="ja">3言語</span><span data-l="en">3 languages</span></small></div>
+          <div class="feat"><i style="color:#1E5BD8">漢</i><b><span data-l="my">ခန်းဂျိ</span><span data-l="ja">漢字字典</span><span data-l="en">Kanji Dictionary</span></b><small>2,610 · <span data-l="my">ရောင်စုံ ရေးနည်း</span><span data-l="ja">カラー書き順</span><span data-l="en">stroke order</span></small></div>
+          <div class="feat"><i data-i="blocks"></i><b><span data-l="my">သဒ္ဒါ</span><span data-l="ja">文法</span><span data-l="en">Grammar</span></b><small>N4–N1 · <span data-l="my">ဥပမာ ဝါကျ</span><span data-l="ja">例文つき</span><span data-l="en">with examples</span></small></div>
+          <div class="feat"><i data-i="quiz"></i><b>JLPT Quiz</b><small>もんだい · 模試</small></div>
+          <div class="feat"><i data-i="play"></i><b>Video Lessons</b><small>YouTube</small></div>
+          <div class="feat"><i data-i="bars"></i><b><span data-l="my">လေ့လာမှု မှတ်တမ်း</span><span data-l="ja">学習記録</span><span data-l="en">Study Record</span></b><small>Study Room · ⭐</small></div>
+          </div>
+      </div>
+      <div class="join">
+        <h3>👑 <span data-l="my">Dokodemo နဲ့ ဒီနေ့ စလိုက်ပါ</span><span data-l="ja">今日からDokodemo</span><span data-l="en">Join Dokodemo Today!</span></h3>
+        <p><span data-l="my">အခမဲ့ အကောင့်ဖွင့်ပြီး ဂျပန်စာ ခရီးကို စလိုက်ပါ။</span><span data-l="ja">無料アカウントで日本語の旅を始めよう。</span><span data-l="en">Start your Japanese learning journey now.</span></p>
+        <a class="btn red" style="align-self:flex-start;font-size:16px" href="https://dokodemojapanese.github.io/"><span data-l="my">အခမဲ့ အကောင့်ဖွင့်မယ်</span><span data-l="ja">無料アカウント作成</span><span data-l="en">Create Free Account</span> →</a>
+        <img src="mascot.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <section id="all">
+    <h2 class="ttl"><span data-l="my">App ထဲမှာ ပါတာ အကုန်</span><span data-l="ja">アプリの全機能</span><span data-l="en">Everything in the app</span></h2>
+    <div class="tabs"><button class="on" data-t="t1">🔍 Discovery <em>52</em></button><button data-t="t2">💬 Dialog <em>38</em></button><button data-t="t3">👑 Pro <em>32</em></button><button data-t="t4">⚙️ Settings</button></div>
+    <div class="pane on" id="t1"><p class="pl"><span data-l="my">အက္ခရာ、အဘိဓာန်、ခန်းဂျိ နဲ့ အကြောင်းအရာအလိုက် ဝေါဟာရ</span><span data-l="ja">文字・辞書・漢字・テーマ別の単語</span><span data-l="en">Scripts, dictionary, kanji and topic vocabulary</span></p><div class="chips"><span class="chip"><b>あ</b>ひらがな<small>ဟီရာဂါနာ</small></span><span class="chip"><b>ア</b>カタカナ<small>ခါတခါနာ</small></span><span class="chip"><b>A</b>ローマ字<small>ရိုမာဂျိ</small></span><span class="chip"><b>活</b>活用<small>ကြိယာပုံစံ</small></span><span class="chip"><b>五</b>五十音<small>အက္ခရာ</small></span><span class="chip"><b>漢</b>漢字<small>ခန်းဂျီ</small></span><span class="chip"><b>辞</b>辞書<small>အဘိဓာန်</small></span><span class="chip"><b>暦</b>ミャンマー暦<small>မြန်မာ ပြက္ခဒိန်</small></span><span class="chip"><b>仏</b>仏教<small>ဓမ္မ</small></span><span class="chip"><b>知</b>知識<small>ဗဟုသုတ</small></span><span class="chip"><b>緬</b>ミャンマー<small>မြန်မာ့အကြောင်း</small></span><span class="chip"><b>家</b>家族<small>မိသားစု</small></span><span class="chip"><b>名</b>名前<small>အမည်များ</small></span><span class="chip"><b>国</b>国<small>နိုင်ငံ</small></span><span class="chip"><b>台</b>台所<small>မီးဖိုချောင်</small></span><span class="chip"><b>果</b>果物<small>သစ်သီး</small></span><span class="chip"><b>菜</b>野菜<small>အသီးအရွက်</small></span><span class="chip"><b>病</b>病院<small>ဆေးရုံ</small></span><span class="chip"><b>薬</b>薬<small>ဆေး</small></span><span class="chip"><b>花</b>花<small>ပန်း</small></span><span class="chip"><b>粧</b>化粧品<small>အလှပြင်ပစ္စည်း</small></span><span class="chip"><b>具</b>家具<small>ပရိဘောဂ</small></span><span class="chip"><b>情</b>感情<small>စိတ်ခံစားမှု</small></span><span class="chip"><b>数</b>数字<small>ကိန်းဂဏန်း</small></span><span class="chip"><b>個</b>助数詞<small>အရေအတွက်</small></span><span class="chip"><b>球</b>スポーツ<small>အားကစား</small></span><span class="chip"><b>銀</b>銀行<small>ဘဏ်</small></span><span class="chip"><b>法</b>法律<small>ဥပဒေ</small></span><span class="chip"><b>車</b>車<small>ကား</small></span><span class="chip"><b>色</b>色<small>အရောင်</small></span><span class="chip"><b>味</b>味<small>အရသာ</small></span><span class="chip"><b>音</b>音楽<small>ဂီတ</small></span><span class="chip"><b>📄</b>PDF<small>PDF သင်ခန်းစာ</small></span><span class="chip"><b>過</b>過去問<small>မေးခွန်းဟောင်း</small></span><span class="chip"><b>電</b>家電<small>လျှပ်စစ်ပစ္စည်း</small></span><span class="chip"><b>動</b>動物<small>တိရစ္ဆာန်</small></span><span class="chip"><b>食</b>食べ物<small>အစားအစာ</small></span><span class="chip"><b>肉</b>肉・魚<small>အသား・ငါး</small></span><span class="chip"><b>職</b>職業<small>အလုပ်အကိုင်</small></span><span class="chip"><b>校</b>学校の物<small>ကျောင်းသုံးပစ္စည်း</small></span><span class="chip"><b>工</b>工具<small>ကိရိယာ</small></span><span class="chip"><b>体</b>体<small>ခန္ဓာကိုယ်</small></span><span class="chip"><b>天</b>天気<small>ရာသီဥတု</small></span><span class="chip"><b>時</b>時間<small>အချိန်</small></span><span class="chip"><b>服</b>服<small>အဝတ်အစား</small></span><span class="chip"><b>買</b>買い物<small>ဈေးဝယ်</small></span><span class="chip"><b>宅</b>家<small>အိမ်</small></span><span class="chip"><b>駅</b>駅・交通<small>ဘူတာ・သွားလာရေး</small></span><span class="chip"><b>山</b>自然<small>သဘာဝ</small></span><span class="chip"><b>旅</b>旅行<small>ခရီးသွား</small></span><span class="chip"><b>年</b>年金<small>ပင်စင်</small></span><span class="chip"><b>染</b>ヘアカラー<small>ဆံပင်ဆိုးဆေး</small></span></div></div>
+    <div class="pane" id="t2"><p class="pl"><span data-l="my">နေရာအလိုက် စကားပြော ဝါကျ ၁၉,၀၀၀ ကျော် — ふりがな・Romaji・၃ ဘာသာ</span><span data-l="ja">場面別の会話19,000文以上 — ふりがな・ローマ字・3言語</span><span data-l="en">19,000+ lines by situation — furigana, romaji, 3 languages</span></p><div class="chips"><span class="chip"><b>般</b>一般<small>သာမန်သုံး</small></span><span class="chip"><b>病</b>病院<small>ဆေးရုံ</small></span><span class="chip"><b>急</b>緊急<small>အရေးပေါ်</small></span><span class="chip"><b>警</b>警察<small>ရဲစခန်း</small></span><span class="chip"><b>道</b>道案内<small>လမ်းမေးခြင်း</small></span><span class="chip"><b>食</b>レストラン<small>စားသောက်ဆိုင်</small></span><span class="chip"><b>銀</b>銀行<small>ဘဏ်</small></span><span class="chip"><b>料</b>料理<small>ချက်ပြုတ်ခြင်း</small></span><span class="chip"><b>宿</b>ホテル<small>ဟော်တယ်</small></span><span class="chip"><b>交</b>交流<small>ဆက်သွယ်ခြင်း</small></span><span class="chip"><b>働</b>仕事<small>လုပ်ငန်းသုံး</small></span><span class="chip"><b>面</b>面接<small>အင်တာဗျူး</small></span><span class="chip"><b>学</b>学校<small>ကျောင်း</small></span><span class="chip"><b>情</b>感情<small>စိတ်ခံစားမှု</small></span><span class="chip"><b>天</b>天気<small>ရာသီဥတု</small></span><span class="chip"><b>運</b>運動<small>အားကစား</small></span><span class="chip"><b>買</b>買い物<small>ဈေးဝယ်</small></span><span class="chip"><b>恋</b>恋愛<small>ချစ်ရေးချစ်ရာ</small></span><span class="chip"><b>喧</b>けんか<small>ရန်ဖြစ်ခြင်း</small></span><span class="chip"><b>挨</b>挨拶<small>နှုတ်ဆက်ခြင်း</small></span><span class="chip"><b>紹</b>自己紹介<small>ကိုယ်မိတ်ဆက်</small></span><span class="chip"><b>役</b>市役所<small>မြို့နယ်ရုံး</small></span><span class="chip"><b>入</b>入管<small>လဝက · ဗီဇာ</small></span><span class="chip"><b>駅</b>駅・電車<small>ဘူတာ · ရထား</small></span><span class="chip"><b>車</b>タクシー<small>တက္ကစီ</small></span><span class="chip"><b>空</b>空港<small>လေဆိပ်</small></span><span class="chip"><b>電</b>電話<small>ဖုန်းပြော</small></span><span class="chip"><b>郵</b>郵便局<small>စာတိုက်</small></span><span class="chip"><b>家</b>不動産<small>အိမ်ငှား</small></span><span class="chip"><b>店</b>コンビニ<small>ကွန်ဗီနီ</small></span><span class="chip"><b>薬</b>薬局<small>ဆေးဆိုင်</small></span><span class="chip"><b>髪</b>美容院<small>ဆံပင်ညှပ်ဆိုင်</small></span><span class="chip"><b>工</b>工場<small>စက်ရုံ</small></span><span class="chip"><b>介</b>介護<small>သက်ကြီးစောင့်ရှောက်ရေး</small></span><span class="chip"><b>歯</b>歯医者<small>သွားဆေးခန်း</small></span><span class="chip"><b>保</b>保育園<small>မူကြို · ကလေးထိန်း</small></span><span class="chip"><b>転</b>車の運転<small>ကားမောင်းခြင်း</small></span><span class="chip"><b>店</b>Apple Store<small>iPhone · iPad ဝယ်ခြင်း</small></span></div></div>
+    <div class="pane" id="t3"><p class="pl"><span data-l="my">JLPT、စာမေးပွဲ、ဂိမ်း、စာဖတ်、နားထောင်、chat လေ့ကျင့်ခန်း</span><span data-l="ja">JLPT・模試・ゲーム・読解・聴解・チャット練習</span><span data-l="en">JLPT, mock exams, games, reading, listening and chat practice</span></p><div class="chips"><span class="chip"><b>習</b>Study Room<small>လေ့လာခန်း</small></span><span class="chip"><b>⭐</b>Star<small>Star စု · Spin · Pro လဲ</small></span><span class="chip"><b>🏆</b>JLPT Game<small>အဆင့်ပြိုင်ပွဲ</small></span><span class="chip"><b>試</b>JLPT<small>အဆင့်လိုက် လေ့လာ</small></span><span class="chip"><b>模</b>JLPT模試<small>JLPT စမ်းသပ်စာမေးပွဲ · N5–N1</small></span><span class="chip"><b>票</b>投票<small>စစ်တမ်း</small></span><span class="chip"><b>声</b>Podcast<small>အသံဖိုင်</small></span><span class="chip"><b>鏡</b>Mirror<small>ပြောင်းပြန်စကား</small></span><span class="chip"><b>反</b>反対語<small>ဆန့်ကျင်ဘက်</small></span><span class="chip"><b>類</b>Same Meaning<small>အဓိပ္ပာယ်တူ</small></span><span class="chip"><b>動</b>Verbs<small>ကြိယာ</small></span><span class="chip"><b>読</b>Readings Vocabulary<small>ခန်းဂျိ ဖတ်နည်း ဝေါဟာရ</small></span><span class="chip"><b>若</b>若者言葉<small>လူငယ်သုံးစကား</small></span><span class="chip"><b>問</b>Quiz JP<small>ဂျပန် မေးခွန်း</small></span><span class="chip"><b>答</b>Quiz MM<small>မြန်မာ မေးခွန်း</small></span><span class="chip"><b>星</b>有名人<small>ထင်ရှားသူများ</small></span><span class="chip"><b>合</b>Matching<small>စကားလုံးတွဲမယ်</small></span><span class="chip"><b>並</b>Scramble<small>စာလုံးစီမယ်</small></span><span class="chip"><b>信</b>TextMe<small>စာပို့မယ်</small></span><span class="chip"><b>豆</b>Wow<small>စိတ်ဝင်စားစရာ</small></span><span class="chip"><b>書</b>書き取り<small>ကြားရာရေး</small></span><span class="chip"><b>宿</b>宿題<small>အိမ်စာ</small></span><span class="chip"><b>物</b>物語<small>ပုံပြင်များ</small></span><span class="chip"><b>章</b>Reading<small>စာဖတ်</small></span><span class="chip"><b>聴</b>Listening<small>နားထောင်</small></span><span class="chip"><b>記</b>Note<small>မှတ်စု</small></span><span class="chip"><b>諺</b>ことわざ<small>စကားပုံများ</small></span><span class="chip"><b>注</b>注意<small>သတိပြုရန်</small></span><span class="chip"><b>敬</b>敬語<small>ယဉ်ကျေးစကား</small></span><span class="chip"><b>商</b>Business Japanese<small>လုပ်ငန်းသုံး</small></span><span class="chip"><b>契</b>Contract<small>အလုပ်စာချုပ်</small></span><span class="chip"><b>音</b>オノマトペ<small>အသံစွဲစကား</small></span></div></div>
+    <div class="pane" id="t4"><div class="sets">
+      <div><b>🌐</b><span data-l="my">ဘာသာစကား — မြန်မာ / 日本語 / English</span><span data-l="ja">表示言語 — ミャンマー語・日本語・英語</span><span data-l="en">Language — Myanmar / Japanese / English</span></div>
+      <div><b>🌙</b><span data-l="my">Dark mode</span><span data-l="ja">ダークモード</span><span data-l="en">Dark mode</span></div>
+      <div><b>🎨</b><span data-l="my">Theme အရောင် ၁၆ မျိုး</span><span data-l="ja">テーマカラー16色</span><span data-l="en">16 theme colors</span></div>
+      <div><b>🔤</b><span data-l="my">စာလုံးအရွယ် နဲ့ စာလုံးပုံစံ ၄ မျိုး</span><span data-l="ja">文字サイズ・フォント4種</span><span data-l="en">Font size and 4 font styles</span></div>
+      <div><b>ふ</b><span data-l="my">ふりがな / Romaji / ဘာသာပြန် ဖွင့်ပိတ်</span><span data-l="ja">ふりがな・ローマ字・訳の表示切替</span><span data-l="en">Furigana / romaji / translation on-off</span></div>
+      <div><b>🔍</b><span data-l="my">Quick Search ခလုတ်</span><span data-l="ja">クイック検索ボタン</span><span data-l="en">Quick Search bubble</span></div>
+      <div><b>🔔</b><span data-l="my">အသိပေးချက် (ဂျပန်/မြန်မာ အချိန် နေ့ ၃ ကြိမ်、ဥပုသ်、JLPT countdown)</span><span data-l="ja">通知（日本・ミャンマー時間で1日3回、布薩日、JLPTカウントダウン）</span><span data-l="en">Notifications (3×/day Japan & Myanmar time, Sabbath, JLPT countdown)</span></div>
+      <div><b>🗣</b><span data-l="my">အသိပေးချက်ကို အသံနဲ့ ဖတ်ပြ・ခေါင်းလောင်းသံ</span><span data-l="ja">通知の読み上げ・チャイム</span><span data-l="en">Read notifications aloud · chime</span></div>
+      <div><b>☁</b><span data-l="my">Google / Email login နဲ့ cloud backup (ဖုန်းပြောင်းလည်း မပျောက်)</span><span data-l="ja">Google・メールでログイン、クラウド保存</span><span data-l="en">Google / email login with cloud backup</span></div>
+      <div><b>🆔</b><span data-l="my">Dokodemo User ID・ပရိုဖိုင်ပုံ</span><span data-l="ja">ユーザーID・プロフィール写真</span><span data-l="en">User ID · profile photo</span></div>
+      <div><b>📶</b><span data-l="my">Offline သုံးလို့ရ・Home screen ထည့်လို့ရ</span><span data-l="ja">オフライン対応・ホーム画面に追加</span><span data-l="en">Works offline · add to Home Screen</span></div>
+      <div><b>🗑</b><span data-l="my">အကောင့်ဖျက်ခြင်း・Privacy</span><span data-l="ja">アカウント削除・プライバシー</span><span data-l="en">Delete account · privacy</span></div>
+    </div></div>
+  </section>
+  <div class="tester" id="tester" hidden>
+    <div>
+      <h3>🙋 <span data-l="my">Tester လိုနေပါတယ်</span><span data-l="ja">テスター募集中</span><span data-l="en">We need testers</span></h3>
+      <p><span data-l="my">Dokodemo ကို Google Play မှာ တင်ဖို့ Android သုံးတဲ့ tester တွေရဲ့ အကူအညီ လိုပါတယ်။ ၁၄ ရက် app ကို ဖုန်းထဲ ထားပြီး ရံဖန်ရံခါ ဖွင့်ပေးရုံပါပဲ 🙏</span><span data-l="ja">Google Play公開のため、Androidのテスターを募集しています。14日間アプリを入れたまま、時々開くだけでOKです 🙏</span><span data-l="en">To launch Dokodemo on Google Play we need Android testers. Keep the app installed for 14 days and open it now and then 🙏</span></p>
+      <a class="btn white" style="margin-top:14px;font-size:15px;padding:10px 18px" href="https://t.me/DokodemoOfficial">✈ <span data-l="my">မေးချင်တာ ရှိရင် Telegram</span><span data-l="ja">質問はTelegramへ</span><span data-l="en">Questions? Telegram</span></a>
+    </div>
+    <div>
+      <ol>
+        <li><span data-l="my">Android ဖုန်းထဲက Gmail နဲ့ </span><span data-l="ja">AndroidのGmailで</span><span data-l="en">With the Gmail on your Android, </span><a href="https://groups.google.com/g/dokodemo-testers"><span data-l="my">Google Group ကို Join ပါ</span><span data-l="ja">Googleグループに参加</span><span data-l="en">join the Google Group</span></a></li>
+        <li><a href="https://play.google.com/apps/testing/com.dokodemo.japanese"><span data-l="my">Tester link ကို ဖွင့်ပြီး「Become a tester」</span><span data-l="ja">テスターリンクで「テスターになる」</span><span data-l="en">Open the tester link → "Become a tester"</span></a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.dokodemo.japanese"><span data-l="my">Google Play ကနေ install လုပ်ပါ</span><span data-l="ja">Google Playからインストール</span><span data-l="en">Install from Google Play</span></a></li>
+        <li><span data-l="my">၁၄ ရက် မဖျက်ဘဲ ထားပေးပါ</span><span data-l="ja">14日間アンインストールしないでください</span><span data-l="en">Keep it installed for 14 days</span></li>
+      </ol>
+      <div class="note">💡 <span data-l="my">Play app နဲ့ website မှာ အကောင့်တစ်ခုတည်းနဲ့ login ဝင်ရင် User ID、Pro、⭐、progress အကုန် တူတူ သုံးလို့ရပါတယ်။</span><span data-l="ja">Play版とWebで同じアカウントにログインすると、ユーザーID・Pro・⭐・進捗を共有できます。</span><span data-l="en">Log in with the same account on the Play app and the website to share your User ID, Pro, ⭐ and progress.</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2 class="ttl"><span data-l="my">ဘယ်လို သုံးမလဲ</span><span data-l="ja">使い方</span><span data-l="en">How to start</span></h2>
+    <div class="how">
+      <div><h4>📱 Android</h4><ol>
+        <li><span data-l="my">Google Play ကနေ install (tester)</span><span data-l="ja">Google Playからインストール（テスター）</span><span data-l="en">Install from Google Play (tester)</span></li>
+        <li><span data-l="my">Google / Email နဲ့ login ဝင်ပါ</span><span data-l="ja">Google / メールでログイン</span><span data-l="en">Log in with Google or email</span></li></ol></div>
+      <div><h4>🍎 iPhone · iPad</h4><ol>
+        <li><span data-l="my">Safari နဲ့ App ကို ဖွင့်ပါ</span><span data-l="ja">Safariでアプリを開く</span><span data-l="en">Open the app in Safari</span></li>
+        <li><span data-l="my">Share ⬆ →「Add to Home Screen」</span><span data-l="ja">共有 ⬆ →「ホーム画面に追加」</span><span data-l="en">Share ⬆ → "Add to Home Screen"</span></li></ol></div>
+      <div><h4>💻 PC</h4><ol>
+        <li><span data-l="my">Chrome / Edge နဲ့ App ကို ဖွင့်ပါ</span><span data-l="ja">Chrome / Edgeで開く</span><span data-l="en">Open in Chrome or Edge</span></li>
+        <li><span data-l="my">address bar က install icon ကို နှိပ်ပါ</span><span data-l="ja">アドレスバーのインストールアイコン</span><span data-l="en">Click the install icon in the address bar</span></li></ol></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap ft">
+    <a class="brand" href="#top"><span class="ic" style="width:46px;height:46px"><img src="logo.svg" alt=""></span><span><b>Dok<span class="sun"></span>demo</b><small>どこでも日本語</small></span></a>
+    <span class="slogan">Learn Japanese. Anywhere • Anytime.</span>
+    <div class="links">
+      <a href="https://dokodemojapanese.github.io/?tab=practice">About Us</a>
+      <a href="https://dokodemojapanese.github.io/privacy.html">Privacy Policy</a>
+      <a href="https://dokodemojapanese.github.io/delete-account.html">Delete account</a>
+      <a href="mailto:JapaneseDokodemo@gmail.com">Contact Us</a>
+    </div>
+    <div class="soc">
+      <a style="background:#fff;color:#E62117" href="https://www.youtube.com/@DokodemoNihongo" aria-label="YouTube">▶</a>
+      <a style="background:#2AABEE" href="https://t.me/DokodemoJapanese" aria-label="Telegram">✈</a>
+      <a style="background:#1877F2" href="https://www.facebook.com/DokodemoJapanese" aria-label="Facebook">f</a>
+    </div>
+    <div class="copyr">© 2026 Dokodemo. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ICO={"home": "<path d=\"M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z\" fill=\"currentColor\" stroke=\"none\"/>", "book": "<path d=\"M2 5c3-1 6-1 10 1 4-2 7-2 10-1v14c-3-1-6-1-10 1-4-2-7-2-10-1z\"/><path d=\"M12 6v14\"/>", "search": "<circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M20 20l-4-4\"/>", "check": "<circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"currentColor\"/><path d=\"M8 12l3 3 5-6\" stroke=\"#fff\"/>", "play": "<rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"3\" fill=\"currentColor\"/><path d=\"M10 9l5 3-5 3z\" fill=\"#fff\" stroke=\"none\"/>", "user": "<circle cx=\"12\" cy=\"8\" r=\"4\" fill=\"currentColor\"/><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\" fill=\"currentColor\"/>", "globe": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18M12 3c-3 3-3 15 0 18M12 3c3 3 3 15 0 18M5 7h14M5 17h14\"/>", "chart": "<path d=\"M4 20V14h3v6zM10 20v-9h3v9zM16 20V8h3v12z\" fill=\"currentColor\"/><path d=\"M4 10l5-4 4 3 7-6M16 3h4v4\"/>", "dict": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\" fill=\"currentColor\"/><path d=\"M9 8h6M9 11h4M8 3v18\" stroke=\"#fff\"/>", "cloud": "<path d=\"M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 19.5 10 4 4 0 0 1 18 18z\" fill=\"currentColor\"/><path d=\"M12 10v6M9.5 13.5L12 16l2.5-2.5\" stroke=\"#fff\"/>", "trophy": "<path d=\"M7 4h10v5a5 5 0 0 1-10 0z\" fill=\"currentColor\"/><path d=\"M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 14v4M8 21h8\"/>", "vocab": "<path d=\"M2 6c3-1 6-1 10 1 4-2 7-2 10-1v13c-3-1-6-1-10 1-4-2-7-2-10-1z\"/><path d=\"M12 7v13M5 10h4M5 13h4M15 10h4M15 13h4\"/>", "blocks": "<rect x=\"9\" y=\"3\" width=\"6\" height=\"6\" rx=\"1\" fill=\"currentColor\"/><rect x=\"3\" y=\"14\" width=\"6\" height=\"6\" rx=\"1\" fill=\"currentColor\"/><rect x=\"15\" y=\"14\" width=\"6\" height=\"6\" rx=\"1\" fill=\"currentColor\"/><path d=\"M12 9v3M6 14v-2h12v2\"/>", "quiz": "<rect x=\"5\" y=\"4\" width=\"14\" height=\"17\" rx=\"2\"/><path d=\"M9 4V2h6v2M8 11l2 2 4-4M8 17h8\"/>", "bars": "<path d=\"M5 20v-6h4v6zM10 20V9h4v11zM15 20V4h4v16z\" fill=\"currentColor\" stroke=\"none\"/>", "chat": "<path d=\"M4 5h16v11H9l-5 4z\" fill=\"currentColor\"/><path d=\"M8 10h8M8 13h5\" stroke=\"#fff\"/>"};document.querySelectorAll("[data-i]").forEach(function(e){e.innerHTML='<svg class="ico" viewBox="0 0 24 24">'+ICO[e.dataset.i]+'</svg>'});
+  var b=document.body,btns=document.querySelectorAll('.lang button');
+  function set(l){b.className='l-'+l;btns.forEach(function(x){x.classList.toggle('on',x.dataset.set===l)});document.documentElement.lang=l;try{localStorage.setItem('dkl',l)}catch(e){}}
+  btns.forEach(function(x){x.onclick=function(){set(x.dataset.set)}});
+  var s=null;try{s=localStorage.getItem('dkl')}catch(e){}
+  if(!s){var n=(navigator.language||'').toLowerCase();s=n.indexOf('ja')===0?'ja':'my'}
+  set(s);
+  document.getElementById('bg').onclick=function(){document.getElementById('hd').classList.toggle('open')};
+  document.querySelectorAll('nav.menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('hd').classList.remove('open')})});
+  document.querySelectorAll('.tabs button').forEach(function(x){x.onclick=function(){document.querySelectorAll('.tabs button,.pane').forEach(function(e){e.classList.remove('on')});x.classList.add('on');document.getElementById(x.dataset.t).classList.add('on')}});
+  /* falling sakura petals */
+  var h=document.querySelector('.hero');
+  if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    for(var i=0;i<12;i++){var p=document.createElement('span');p.className='petal';p.style.left=(Math.random()*100)+'%';p.style.animationDuration=(7+Math.random()*7)+'s';p.style.animationDelay=(-Math.random()*12)+'s';p.style.transform='scale('+(0.6+Math.random()*.7)+')';h.appendChild(p)}
+  }
+  /* tester card follows the app's config.json (tpop) */
+  var t=document.getElementById('tester');t.hidden=false;
+  try{fetch('https://dokodemojapanese.github.io/config.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(c){if(c&&c.tpop===false)t.hidden=true}).catch(function(){})}catch(e){}
+})();
+</script>
 </body>
 </html>
