@@ -650,6 +650,12 @@ body.l-my [data-l="my"],body.l-en [data-l="en"],body.l-ja [data-l="ja"]{display:
   .tester,.how{grid-template-columns:1fr}
   .join{padding:22px 20px 0;min-height:0}.join img{position:static;width:150px;margin:14px auto 0}
 }
+
+/* 2026-11-08 fix: modal list collapsed on iPad Safari / some Android (flex:1 basis 0 in auto-height column) — 3D animation kept */
+.mbox{min-height:min(480px,calc(100% - 32px))}
+.mwrap{flex:1 1 auto!important;min-height:0;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.mhd,.msr{flex:none}
+html.mopen,html.mopen body{overflow:hidden!important}
 </style>
 </head>
 <body class="l-my">
@@ -2873,5 +2879,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c
  var t=g.querySelector('.gptag');if(t)t.innerHTML='<span class="gpdot"></span>✅ Available now';var x=g.querySelector('.gptst');if(x)x.remove();var n=g.querySelector('.gpn');if(n)n.remove();
 }).catch(function(){})}catch(e){}})();
 </script>
+<script>(function(){var m=document.getElementById('mdl');if(!m)return;new MutationObserver(function(){document.documentElement.classList.toggle('mopen',!m.hidden)}).observe(m,{attributes:true,attributeFilter:['hidden']})})();</script>
 </body>
 </html>
