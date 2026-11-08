@@ -651,6 +651,11 @@ body.l-my [data-l="my"],body.l-en [data-l="en"],body.l-ja [data-l="ja"]{display:
   .join{padding:22px 20px 0;min-height:0}.join img{position:static;width:150px;margin:14px auto 0}
 }
 
+
+/* Safari/iPad: after the 3D entrance animation finishes, drop the 3D layers so cards don't break apart when scrolling */
+.mgrid.adone{perspective:none!important}
+.mgrid.adone .it{animation:none!important;opacity:1!important;transform:none!important}
+.g-set .it{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform-style:flat;transform-style:flat}
 /* 2026-11-08 fix: modal list collapsed on iPad Safari / some Android (flex:1 basis 0 in auto-height column) — 3D animation kept */
 .mbox{min-height:min(480px,calc(100% - 32px))}
 .mwrap{flex:1 1 auto!important;min-height:0;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
@@ -2879,6 +2884,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c
  var t=g.querySelector('.gptag');if(t)t.innerHTML='<span class="gpdot"></span>✅ Available now';var x=g.querySelector('.gptst');if(x)x.remove();var n=g.querySelector('.gpn');if(n)n.remove();
 }).catch(function(){})}catch(e){}})();
 </script>
-<script>(function(){var m=document.getElementById('mdl');if(!m)return;new MutationObserver(function(){document.documentElement.classList.toggle('mopen',!m.hidden)}).observe(m,{attributes:true,attributeFilter:['hidden']})})();</script>
+<script>(function(){var m=document.getElementById('mdl');if(!m)return;new MutationObserver(function(){document.documentElement.classList.toggle('mopen',!m.hidden)}).observe(m,{attributes:true,attributeFilter:['hidden']});var g=document.getElementById('mgrid'),t=0;if(g)new MutationObserver(function(){g.classList.remove('adone');clearTimeout(t);var n=g.children.length;t=setTimeout(function(){g.classList.add('adone')},Math.min(n*60,950)+800)}).observe(g,{childList:true})})();</script>
 </body>
 </html>
