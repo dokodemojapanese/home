@@ -709,45 +709,164 @@ html.mopen,html.mopen body{overflow:hidden!important}
   </div>
 
 <section id="dict" class="dx">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;800&family=Noto+Serif+Myanmar:wght@500;700&display=swap" rel="stylesheet">
 <style>
-.dx *{box-sizing:border-box}.dx{max-width:1100px;margin:28px auto;padding:0 16px}
+.dx *,.dxp *{box-sizing:border-box}
+.dx{max-width:1100px;margin:28px auto;padding:0 16px}
 .dx .dxc{background:linear-gradient(135deg,#14223D,#1E3A6E 60%,#2B4C7E);border-radius:28px;padding:22px 18px 18px;color:#fff;box-shadow:0 14px 34px rgba(20,34,61,.18)}
-.dx h2{margin:0;font-size:24px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.dx h2 .dxk{width:42px;height:42px;border-radius:14px;background:#fff;color:#14223D;display:inline-flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}
+.dx h2{margin:0;font-size:24px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.dx .dxk{width:42px;height:42px;border-radius:14px;background:#fff;color:#14223D;display:inline-flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}
 .dx .dxsub{color:#C9D3E6;font-size:13.5px;margin:6px 0 14px;line-height:1.7}
 .dx .dxsb{display:flex;align-items:center;gap:8px;background:#fff;border-radius:18px;padding:0 8px 0 16px;height:56px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
 .dx .dxsb input{flex:1;min-width:0;border:none;outline:none;font:inherit;font-size:17px;color:#14223D;background:transparent}
 .dx .dxsb button{width:44px;height:44px;border-radius:14px;border:none;background:#F1F3F8;color:#14223D;font-size:18px;cursor:pointer}
-.dx .dxlvw{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 2px}
-.dx .dxlvw button{height:36px;padding:0 14px;border-radius:18px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
-.dx .dxlvw button.on{background:#fff;color:#14223D;border-color:#fff}
-.dx .dxres{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:10px}
-.dx .dxi{background:#fff;color:#14223D;border-radius:18px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;text-align:left;border:none;font:inherit;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.08);width:100%}
-.dx .dxi .dxw{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
-.dx .dxi b{font-size:21px;line-height:1.3;word-break:break-word}.dx .dxi .dxrd{font-size:13px;color:#5A6680}.dx .dxi .dxmm{font-size:14px;line-height:1.7}.dx .dxi .dxe{font-size:12.5px;color:#6B7486}
-.dx .dxb{flex:none;font-size:11px;font-weight:900;color:#fff;border-radius:9px;padding:2px 8px;margin-top:4px}
-.dx .dxs{flex:none;width:40px;height:40px;border-radius:20px;border:none;background:#EEF2FF;color:#3D5AFE;font-size:17px;cursor:pointer}
-.dx .dxmsg{color:#C9D3E6;font-size:13.5px;padding:14px 4px;text-align:center;line-height:1.8}
+.dx .dxmsg{color:#C9D3E6;font-size:13.5px;padding:14px 4px;line-height:1.8}
+.dx .dxhint{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.dx .dxhint button{border:none;background:rgba(255,255,255,.14);color:#fff;border-radius:14px;padding:7px 12px;font:inherit;font-size:13.5px;cursor:pointer}
+.dx .dxres{margin-top:10px;background:#fff;border-radius:20px;overflow:hidden}
+.dx .dxrw{display:flex;align-items:center;gap:12px;width:100%;border:none;border-bottom:1px solid #EEF0F4;background:#fff;color:#14223D;padding:12px 16px;text-align:left;font:inherit;cursor:pointer}
+.dx .dxrw:last-child{border-bottom:none}.dx .dxrw:hover{background:#FBF6F2}
+.dx .dxrw .zw{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.dx .dxrw b{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:800;line-height:1.35}
+.dx .dxrw small{font-size:12.5px;color:#7A6F68}.dx .dxrw span.zm{font-size:14px;color:#B4532A;line-height:1.6;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.dx .dxrw i{font-style:normal;color:#C9B8AC;font-size:20px}
 .dx .dxmore{display:block;margin:12px auto 0;height:44px;padding:0 22px;border-radius:22px;border:none;background:#fff;color:#14223D;font:inherit;font-weight:800;cursor:pointer}
-.dx .dxhint{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.dx .dxhint button{border:none;background:rgba(255,255,255,.14);color:#fff;border-radius:14px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
-.dx .dxi.open{outline:3px solid #FFC94D}
-.dx .dxd{grid-column:1/-1;background:#FFFDF6;color:#14223D;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px}
-.dx .dxd .dxbig{font-size:40px;font-weight:900;line-height:1.2}.dx .dxd .dxrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.dx .dxd .dxchip{background:#F1F3F8;border-radius:12px;padding:4px 10px;font-size:13px}
+/* detail page */
+.dxp{position:fixed;inset:0;z-index:1000;background:#F4F3F1;overflow-y:auto;-webkit-overflow-scrolling:touch;color:#1E1A17;opacity:0;transform:translateY(16px);transition:opacity .22s,transform .22s}
+.dxp.zon{opacity:1;transform:none}
+.dxp .ztb{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:8px;padding:10px 12px;background:rgba(244,243,241,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #E2DFDA}
+.dxp .ztb .ztt{flex:1;min-width:0;font-family:'Noto Serif JP',serif;font-weight:800;font-size:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dxp .zcb{width:44px;height:44px;border-radius:22px;border:1px solid #E4DFD9;background:#fff;color:#B4532A;font-size:18px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
+.dxp .zcb.zbk{border:none;background:transparent;font-size:30px;font-weight:300;width:40px}
+.dxp .zcb.zon{background:#B4532A;color:#fff;border-color:#B4532A}
+.dxp .zin{max-width:760px;margin:0 auto;padding:16px 14px 60px;display:flex;flex-direction:column;gap:14px}
+.dxp .zhero{display:flex;flex-direction:column;align-items:center;gap:10px;padding:8px 0 4px;text-align:center}
+.dxp .zhw{font-family:'Noto Serif JP',serif;font-weight:800;font-size:46px;line-height:1.2;word-break:break-word}
+.dxp .zhb{display:flex;gap:16px;justify-content:center}.dxp .zhb .zcb{width:58px;height:58px;border-radius:29px;font-size:22px}
+.dxp .zpr{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:center;font-size:15px}
+.dxp .zpr b{color:#B4532A;font-size:12.5px;letter-spacing:.5px}
+.dxp .zpr span{font-family:'Noto Serif JP',serif;font-size:18px}
+.dxp .zpr button{border:none;background:none;color:#B4532A;font-size:18px;cursor:pointer;padding:4px}
+.dxp .chs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.dxp .zch{border-radius:16px;padding:4px 14px;font-family:'Noto Serif JP',serif;font-style:italic;font-size:14px;background:#F6E6DD;color:#9A4524}
+.dxp .zch.zlv{font-style:normal;font-family:inherit;font-weight:800;color:#fff;font-size:12.5px}
+.dxp .zsm{font-family:'Noto Serif Myanmar','Noto Sans Myanmar',serif;color:#B4532A;font-size:19px;line-height:1.8;text-align:center}
+.dxp .zen0{color:#6B625C;font-size:15px;text-align:center}
+.dxp .zcd{background:#fff;border-radius:26px;padding:18px 18px;box-shadow:0 1px 0 #ECE8E3}
+.dxp .zct{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.dxp .zct .zn{font-family:'Noto Serif JP',serif;font-weight:800;color:#B4532A;font-size:28px;line-height:1}
+.dxp .zct .zl{letter-spacing:2px;font-weight:800;color:#8A7F78;font-size:13px;text-transform:uppercase}
+.dxp .zct .ztg{margin-left:auto;background:#F1EFEC;color:#6B625C;border-radius:10px;padding:3px 10px;font-size:12.5px}
+.dxp .zms{font-family:'Noto Serif Myanmar','Noto Sans Myanmar',serif;font-size:18px;line-height:1.85;font-weight:700}
+.dxp .zex{border-left:4px solid #B4532A;padding:4px 0 4px 12px;margin:10px 0;cursor:pointer}
+.dxp .zex .zj{font-family:'Noto Serif JP',serif;font-size:18px;line-height:1.7}.dxp .zex .zj em{font-style:normal;color:#B4532A;font-weight:800;text-decoration:underline dotted 2px;text-underline-offset:4px}
+.dxp .zex .zm{color:#6B625C;font-size:14.5px;line-height:1.75}.dxp .zex .ze{color:#8A7F78;font-size:13px;font-style:italic}
+.dxp .zfs{display:flex;flex-direction:column;gap:12px}
+.dxp .zfsh{font-weight:800;font-size:14px;color:#1E1A17;display:flex;align-items:center;gap:8px}.dxp .zfsh:before{content:'';width:4px;height:16px;border-radius:2px;background:#B4532A}
+.dxp .zfg{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,46%),1fr));gap:8px}
+.dxp .zfb{border:1px solid #EFE9E3;background:#FCFAF8;border-radius:16px;padding:8px 12px;text-align:left;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px;color:#1E1A17}
+.dxp .zfb small{font-size:11.5px;color:#8A7F78}.dxp .zfb b{font-family:'Noto Serif JP',serif;font-size:18px}.dxp .zfb span{font-size:12.5px;color:#9A4524}
+.dxp .zkj{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;padding:12px 0;border-top:1px dashed #E8E2DC}.dxp .zkj:first-of-type{border-top:none}
+.dxp .zkj svg{flex:none;border-radius:14px;cursor:pointer}
+.dxp .zkji{flex:1;min-width:200px;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.dxp .zkji .zbig{font-family:'Noto Serif JP',serif;font-size:30px;font-weight:800;line-height:1}
+.dxp .zkji .zr{display:flex;gap:8px}.dxp .zkji .zr b{flex:none;width:76px;color:#8A7F78;font-size:12px;padding-top:2px}
+.dxp .zchips{display:flex;gap:8px;flex-wrap:wrap}
+.dxp .zcp{border:1.5px solid #E7C9B8;background:#FBF5F1;color:#9A4524;border-radius:22px;padding:8px 16px;font:inherit;font-size:15px;cursor:pointer;font-family:'Noto Serif JP',serif}
+.dxp .zcp.zg{border-color:#E4E1DD;background:#F1EFEC;color:#1E1A17}
+.dxp .zwf{display:flex;gap:10px;align-items:baseline;padding:7px 0;border:none;background:none;width:100%;text-align:left;font:inherit;cursor:pointer;color:#1E1A17;flex-wrap:wrap}
+.dxp .zwf b{font-family:'Noto Serif JP',serif;font-size:20px;color:#B4532A}.dxp .zwf i{color:#8A7F78;font-size:13px}.dxp .zwf span{font-size:14px;color:#4A403A}
+.dxp .znote{background:#EDEEF2;border:1px solid #DADDE5}
+.dxp .znote li{margin:6px 0;line-height:1.75;font-size:15px}.dxp .znote ul{margin:0;padding-left:20px}
+.dxp .zft{font-size:12.5px;color:#8A7F78;text-align:center;line-height:1.7;padding:6px 10px}
 </style>
 <div class="dxc">
  <h2><span class="dxk">ど</span><span><span data-l="my">Dokodemo အဘိဓာန်</span><span data-l="ja">どこでも辞書</span><span data-l="en">Dokodemo Dictionary</span></span></h2>
- <div class="dxsub"><span data-l="my">ဂျပန် ⇄ မြန်မာ ⇄ English · စကားလုံး <b id="dxN">17,600+</b> · ခန်းဂျိ / ဟီရာဂါနာ / Romaji / မြန်မာ / English နဲ့ ရှာလို့ရပါတယ် · 🔊 နှိပ်ရင် အသံထွက်</span><span data-l="ja">日本語 ⇄ ミャンマー語 ⇄ 英語 · <b>17,600+</b>語 · 漢字・ひらがな・ローマ字・ミャンマー語・英語で検索 · 🔊で発音</span><span data-l="en">Japanese ⇄ Myanmar ⇄ English · <b>17,600+</b> words · search by kanji, kana, romaji, Myanmar or English · 🔊 to hear it</span></div>
+ <div class="dxsub"><span data-l="my">ဂျပန် ⇄ မြန်မာ ⇄ English · စကားလုံး <b class="dxN">17,500+</b> · ခန်းဂျိ / ဟီရာဂါနာ / Romaji / မြန်မာ / English နဲ့ ရှာပါ · ဝင်ကြည့်ရင် သဒ္ဒါပုံစံ၊ ဥပမာ၊ ခန်းဂျိ ရေးနည်း အကုန်ပါတယ်</span><span data-l="ja">日本語 ⇄ ミャンマー語 ⇄ 英語 · <b class="dxN">17,500+</b>語 · 漢字・かな・ローマ字・ミャンマー語・英語で検索 · 活用・例文・書き順つき</span><span data-l="en">Japanese ⇄ Myanmar ⇄ English · <b class="dxN">17,500+</b> words · search by kanji, kana, romaji, Myanmar or English · forms, examples and stroke order inside</span></div>
  <label class="dxsb"><span aria-hidden="true">🔍</span><input id="dxq" type="text" autocomplete="off" enterkeyhint="search" aria-label="Search" placeholder="日本語 · romaji · မြန်မာ · English"><button type="button" id="dxx" aria-label="Clear">✕</button></label>
- <div class="dxlvw" id="dxlv"></div>
  <div id="dxr"></div>
 </div>
 <script>
 (function(){
-var D=null,R=null,LOAD=null,LV=0,Q='',LIM=40,OPEN=-1;
-var LC={1:'#C0392B',2:'#6A3FE8',3:'#3D5AFE',4:'#17808A',5:'#2E9E5B'};
+var D=null,R=null,SENT=null,KJ=null,KVG=null,LOAD=null,Q='',LIM=30,STACK=[],KD_COL=['#E8463A','#1F3A68','#0F6B5C','#B8860B','#7A3EB1','#C2416B'],LC={1:'#C0392B',2:'#6A3FE8',3:'#3D5AFE',4:'#17808A',5:'#2E9E5B'},SYN={},ANTI={},BYK={};
 function lg(){return (document.body.className.match(/l-(\w+)/)||[])[1]||'my'}
-function tl(my,ja,en){var l=lg();return l==='ja'?ja:l==='en'?en:my}
+function T(my,ja,en){var l=lg();return l==='ja'?ja:l==='en'?en:my}
 function es(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var KV=[];
+const DZ_GROW={a:'あいうえお',k:'かきくけこ',g:'がぎぐげご',s:'さしすせそ',t:'たちつてと',n:'なにぬねの',b:'ばびぶべぼ',m:'まみむめも',r:'らりるれろ',w:'わいうえお'};
+const DZ_ROW={'う':'w','く':'k','ぐ':'g','す':'s','つ':'t','ぬ':'n','ぶ':'b','む':'m','る':'r'};
+const DZ_RU_KANJI=new Set(['帰る','入る','走る','知る','要る','切る','減る','限る','喋る','参る','照る','蹴る','滑る','握る','混じる','散る','焦る','練る','茂る','嘲る','覆る','遮る','湿る','捻る','陥る','罵る','翻る','甦る','蘇る']);
+const DZ_NA_I=new Set(['きれい','きらい','ゆうめい','しつれい','ていねい','とくい','ふあんてい','あいまい','さいわい','せいけつ']);
+const DZ_I_ROW='いきぎしじちぢにひびぴみりゐ',DZ_E_ROW='えけげせぜてでねへべぺめれ';
+let DZ_KVG=null;function dzKV(){if(DZ_KVG)return DZ_KVG;DZ_KVG={};try{KV.forEach(v=>{if(v.k)DZ_KVG[v.k]=v.g;if(v.r)DZ_KVG[v.r]=v.g})}catch(e){}return DZ_KVG}
+function dzType(w){let k=(w.k||'').trim(),r=(w.r||'').trim();const mm=(w.mm||'').replace(/\s*\(.*?\)\s*$/,'').trim(),en=(w.en||'').toLowerCase().trim();
+  if(!r||/[〜～…\s、。・/]/.test(r)||r.length>14)return null;if(w.src==='k'||k!==r&&!k.endsWith(r.slice(-1))&&!/ます$/.test(r))return null;if(/[ァ-ヶ]/.test(r)&&!/する$/.test(r))return null;
+  const isVerbMean=/(သည်|တယ်)$/.test(mm)||/^to [a-z]/.test(en);
+  const isAdjMean=/သော$/.test(mm);
+  const kv=dzKV()[k]||dzKV()[r];
+  if(/ます$/.test(r)&&isVerbMean){const st=r.slice(0,-2),last=st.slice(-1),kp=k.replace(/します$/,'');
+    if(/来ます$/.test(k)||r==='きます'&&kv===3)return {t:'v',g:3,k:k.replace(/ます$/,'る'),r:'くる'};
+    if(r==='します'||/します$/.test(r)&&(kv===3||kp.length>=2&&/^[一-鿿ァ-ヶー]+$/.test(kp)))return {t:'v',g:3,k:k.replace(/します$/,'する'),r:r.replace(/します$/,'する')};
+    const ich=['み','き','い','に','おき','かり','あび','おり','でき','たり','しんじ','おち','すぎ','いき_'];
+    const g=kv||(DZ_E_ROW.includes(last)||ich.includes(st)?2:1);
+    if(g===2)return {t:'v',g:2,k:k.replace(/ます$/,'る'),r:st+'る'};
+    const row=Object.keys(DZ_GROW).find(x=>x!=='a'&&DZ_GROW[x][1]===last);if(!row)return null;const u=DZ_GROW[row][2];return {t:'v',g:1,k:k.replace(/.ます$/,u),r:st.slice(0,-1)+u}}
+  if(/する$/.test(r)&&r.length>2)return {t:'v',g:3,k,r};
+  if(isVerbMean&&/[うくぐすつぬぶむる]$/.test(r)){
+    if(r==='くる'||k==='来る')return {t:'v',g:3,k:'来る',r:'くる'};
+    if(r==='する')return {t:'v',g:3,k:'する',r:'する'};
+    if(kv)return {t:'v',g:kv,k,r};
+    if(/る$/.test(r)){const p=r.slice(-2,-1);const ex=DZ_RU_KANJI.has(k)||k===r&&['かえる','はいる','はしる','しゃべる','へる','しる','ける','すべる','にぎる'].includes(r);
+      if((DZ_I_ROW.includes(p)||DZ_E_ROW.includes(p))&&!ex)return {t:'v',g:2,k,r}}
+    return {t:'v',g:1,k,r}}
+  if(isAdjMean){if(/い$/.test(r)&&!DZ_NA_I.has(r)&&r.length>=2)return {t:'i',k,r};
+    if(!/[うくぐすつぬぶむる]$/.test(r))return {t:'na',k:k.replace(/[なだ]$/,''),r:r.replace(/[なだ]$/,'')}}
+  return null}
+function dzSplit(k,r,n){/* drop n kana from the end of both */return [k.endsWith(r.slice(-n))?k.slice(0,-n):k.slice(0,-n),r.slice(0,-n)]}
+function dzForms(w){const T0=dzType(w);if(!T0)return null;const {k,r}=T0,F=[];
+  const add=(sec,lab,sk,sr)=>F.push({sec,lab,k:sk,r:sr});
+  if(T0.t==='v'){let mk;
+    if(T0.g===3&&/する$/.test(r)){const [bk,br]=dzSplit(k,r,2);mk=(x)=>[bk+x,br+x];
+      var S_={dict:'する',masu:'します',nai:'しない',ta:'した',te:'して',pot:'できる',vol:'しよう',imp:'しろ',ba:'すれば',pas:'される',cau:'させる',stem:'し'};
+      var g=s=>mk(S_[s]);}
+    else if(T0.g===3){const bk=k.replace(/る$/,'').replace(/^来$|来/,'来');const kb=k.slice(0,-1);
+      const Kr={dict:'くる',masu:'きます',nai:'こない',ta:'きた',te:'きて',pot:'こられる',vol:'こよう',imp:'こい',ba:'くれば',pas:'こられる',cau:'こさせる',stem:'き'};
+      var g=s=>{const rr=Kr[s];return [/来/.test(k)?kb+rr.slice(1):rr,rr]};}
+    else if(T0.g===2){const [bk,br]=dzSplit(k,r,1);const sfx={dict:'る',masu:'ます',nai:'ない',ta:'た',te:'て',pot:'られる',vol:'よう',imp:'ろ',ba:'れば',pas:'られる',cau:'させる',stem:''};
+      var g=s=>[bk+sfx[s],br+sfx[s]];}
+    else{const last=r.slice(-1),row=DZ_ROW[last];if(!row)return null;const R=DZ_GROW[row],[bk,br]=dzSplit(k,r,1);
+      const iku=r==='いく'||/^行く$|行く$/.test(k)&&/いく$/.test(r);
+      const te=iku?'って':{'う':'って','つ':'って','る':'って','む':'んで','ぶ':'んで','ぬ':'んで','く':'いて','ぐ':'いで','す':'して'}[last];
+      const ta=te.replace(/て$/,'た').replace(/で$/,'だ');const a=row==='w'?'わ':R[0];
+      const sfx={dict:last,masu:R[1]+'ます',nai:a+'ない',ta,te,pot:R[3]+'る',vol:R[4]+'う',imp:R[3],ba:R[3]+'ば',pas:a+'れる',cau:a+'せる',stem:R[1]};
+      var g=s=>[bk+sfx[s],br+sfx[s]];}
+    const j=(s,x)=>{const [a,b]=g(s);return [a+x,b+x]};
+    const P='丁寧形',PL='普通形',TE='て形・た形',AB='可能・意向・命令',CO='条件形',PC='受身・使役';
+    add(P,['ပုံမှန် (ယဉ်ကျေး)','ます形','polite'],...j('stem','ます'));add(P,['အငြင်း (ယဉ်ကျေး)','ません','polite neg.'],...j('stem','ません'));
+    add(P,['အတိတ် (ယဉ်ကျေး)','ました','polite past'],...j('stem','ました'));add(P,['အတိတ်အငြင်း','ませんでした','polite past neg.'],...j('stem','ませんでした'));
+    add(P,['ဖိတ်ခေါ်','ましょう','let\'s'],...j('stem','ましょう'));add(P,['ချင်တယ်','たい','want to'],...j('stem','たい'));
+    add(PL,['အဘိဓာန်ပုံစံ','辞書形','dictionary'],...g('dict'));add(PL,['ない形 (အငြင်း)','ない形','negative'],...g('nai'));
+    add(PL,['た形 (အတိတ်)','た形','past'],...g('ta'));{const [a,b]=g('nai');add(PL,['အတိတ်အငြင်း','なかった','past neg.'],a.replace(/い$/,'かった'),b.replace(/い$/,'かった'))}
+    add(TE,['て形','て形','te-form'],...g('te'));add(TE,['～နေတယ်','ている','-ing'],...j('te','いる'));add(TE,['～ပေးပါ','てください','please'],...j('te','ください'));
+    {const [a,b]=g('nai');add(TE,['မ～ပါနဲ့','ないでください','please don\'t'],a+'でください',b+'でください')}add(TE,['～ဖူးတယ်','たことがある','have done'],...j('ta','ことがある'));
+    add(AB,['နိုင်တယ်','可能形','can'],...g('pot'));add(AB,['～ကြစို့ (ရိုးရိုး)','意向形','let\'s (plain)'],...g('vol'));add(AB,['အမိန့်','命令形','command'],...g('imp'));
+    add(CO,['～ရင် (ば)','ば形','if'],...g('ba'));add(CO,['～ရင် (たら)','たら形','if / when'],...j('ta','ら'));
+    add(PC,['ခံရတယ်','受身形','passive'],...g('pas'));add(PC,['ခိုင်းတယ်','使役形','causative'],...g('cau'));
+    return {T:T0,F,tag:['ကြိယာ '+['','Ⅰ','Ⅱ','Ⅲ'][T0.g],'動詞'+['','Ⅰ','Ⅱ','Ⅲ'][T0.g],'Verb '+['','I','II','III'][T0.g]]}}
+  if(T0.t==='i'){const ii=r==='いい'||r==='よい';const br=ii?'よ':r.slice(0,-1),bk=ii?(k==='いい'||k==='よい'?'よ':k.slice(0,-1)):k.slice(0,-1),kb=bk;
+    const j=x=>[kb+x,br+x];const P='丁寧形',PL='普通形',OT='その他';
+    add(P,['ပုံမှန်','です','polite'],k+'です',r+'です');add(P,['အငြင်း','くないです','polite neg.'],...j('くないです'));add(P,['အတိတ်','かったです','polite past'],...j('かったです'));add(P,['အတိတ်အငြင်း','くなかったです','polite past neg.'],...j('くなかったです'));
+    add(PL,['ရိုးရိုး','普通形','plain'],k,r);add(PL,['အငြင်း','くない','negative'],...j('くない'));add(PL,['အတိတ်','かった','past'],...j('かった'));add(PL,['အတိတ်အငြင်း','くなかった','past neg.'],...j('くなかった'));
+    add(OT,['～ပြီး (ဆက်)','くて','and'],...j('くて'));add(OT,['ကြိယာဝိသေသန','く','adverb'],...j('く'));add(OT,['～ဖြစ်လာ','くなる','become'],...j('くなる'));add(OT,['～ရင် (ば)','ければ','if'],...j('ければ'));add(OT,['～ရင် (たら)','かったら','if / when'],...j('かったら'));add(OT,['လွန်းတယ်','すぎる','too'],...(ii?['よすぎる','よすぎる']:[bk+'すぎる',br+'すぎる']));add(OT,['ပုံရတယ်','そう','looks'],...(ii?['よさそう','よさそう']:[bk+'そう',br+'そう']));
+    return {T:T0,F,tag:['い နာမဝိသေသန','い形容詞','i-adjective']}}
+  if(T0.t==='na'){const j=x=>[k+x,r+x];const P='丁寧形',PL='普通形',OT='その他';
+    add(P,['ပုံမှန်','です','polite'],...j('です'));add(P,['အငြင်း','じゃありません','polite neg.'],...j('じゃありません'));add(P,['အတိတ်','でした','polite past'],...j('でした'));add(P,['အတိတ်အငြင်း','じゃありませんでした','polite past neg.'],...j('じゃありませんでした'));
+    add(PL,['ရိုးရိုး','だ','plain'],...j('だ'));add(PL,['အငြင်း','じゃない','negative'],...j('じゃない'));add(PL,['အတိတ်','だった','past'],...j('だった'));add(PL,['အတိတ်အငြင်း','じゃなかった','past neg.'],...j('じゃなかった'));
+    add(OT,['နာမ်ရှေ့','な＋名詞','+ noun'],...j('な'));add(OT,['～ပြီး (ဆက်)','で','and'],...j('で'));add(OT,['ကြိယာဝိသေသန','に','adverb'],...j('に'));add(OT,['～ဖြစ်လာ','になる','become'],...j('になる'));add(OT,['～ရင်','なら','if'],...j('なら'));add(OT,['～ရင် (たら)','だったら','if / when'],...j('だったら'));
+    return {T:T0,F,tag:['な နာမဝိသေသန','な形容詞','na-adjective']}}
+  return null}
+function dzRom(r){try{return dkRomaji(r)}catch(e){return ''}}
+function dzSay(t){return `onclick="event.stopPropagation();try{speakJa('${String(t).replace(/'/g,'')}',.9)}catch(e){}"`}
+
 function dkRomaji(s){
   const H=s.replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-96));
   const Y={'きゃ':'kya','きゅ':'kyu','きょ':'kyo','しゃ':'sha','しゅ':'shu','しょ':'sho','しぇ':'she','ちゃ':'cha','ちゅ':'chu','ちょ':'cho','ちぇ':'che','にゃ':'nya','にゅ':'nyu','にょ':'nyo','ひゃ':'hya','ひゅ':'hyu','ひょ':'hyo','みゃ':'mya','みゅ':'myu','みょ':'myo','りゃ':'rya','りゅ':'ryu','りょ':'ryo','ぎゃ':'gya','ぎゅ':'gyu','ぎょ':'gyo','じゃ':'ja','じゅ':'ju','じょ':'jo','じぇ':'je','びゃ':'bya','びゅ':'byu','びょ':'byo','ぴゃ':'pya','ぴゅ':'pyu','ぴょ':'pyo','ふぁ':'fa','ふぃ':'fi','ふぇ':'fe','ふぉ':'fo','てぃ':'ti','でぃ':'di','とぅ':'tu','どぅ':'du','うぃ':'wi','うぇ':'we','うぉ':'wo','ゔぁ':'va','ゔぃ':'vi','ゔぇ':'ve','ゔぉ':'vo','つぁ':'tsa','いぇ':'ye'};
@@ -771,38 +890,106 @@ function dkRomaji(s){
   return o;
 }
 function hira(s){return String(s).replace(/[ァ-ヶ]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-96)})}
-function load(){if(LOAD)return LOAD;LOAD=fetch('dict.json',{cache:'force-cache'}).then(function(r){return r.json()}).then(function(a){D=a;R=new Array(a.length);var n=document.getElementById('dxN');if(n)n.textContent=a.length.toLocaleString();return a}).catch(function(e){LOAD=null;throw e});return LOAD}
-function rom(i){if(R[i]===undefined){var w=D[i];try{R[i]=dkRomaji(hira(w[1]||w[0])).toLowerCase().replace(/[^a-z]/g,'')}catch(e){R[i]=''}}return R[i]}
+function getJ(u){return fetch(u,{cache:'force-cache'}).then(function(r){if(!r.ok)throw new Error(u);return r.json()})}
+function load(){if(LOAD)return LOAD;LOAD=getJ('dict.json').then(function(o){var a=o.d||o;D=a;R=new Array(a.length);DZ_KVG=o.kv||{};
+  a.forEach(function(w,i){if(!BYK[w[0]])BYK[w[0]]=i});
+  (o.rui||[]).forEach(function(p){(SYN[p[0]]=SYN[p[0]]||[]).push(p[1]);(SYN[p[1]]=SYN[p[1]]||[]).push(p[0])});
+  (o.ant||[]).forEach(function(p){(ANTI[p[0]]=ANTI[p[0]]||[]).push(p[1]);(ANTI[p[1]]=ANTI[p[1]]||[]).push(p[0])});
+  document.querySelectorAll('.dxN').forEach(function(n){n.textContent=a.length.toLocaleString()});return a}).catch(function(e){LOAD=null;throw e});return LOAD}
+var SL=null,KL=null,VL=null;
+function loadSent(){return SL||(SL=getJ('sent.json').then(function(a){SENT=a}).catch(function(){SENT=[]}))}
+function loadKanji(){return KL||(KL=getJ('kanji.json').then(function(a){KJ=a}).catch(function(){KJ={}}))}
+function loadKvg(){return VL||(VL=fetch('kvg.txt',{cache:'force-cache'}).then(function(r){return r.ok?r.text():''}).then(function(t){KVG={};t.split('\n').forEach(function(l){var p=l.split('\t');if(!p[0]||!p[1])return;KVG[p[0]]=[p[1].split('|'),(p[2]||'').split(';').filter(Boolean).map(function(x){return x.split(',').map(Number)})]})}).catch(function(){KVG={}}))}
+function rom(i){if(R[i]===undefined){var w=D[i];try{R[i]=dkRomaji(hira(w[1]||w[0]))}catch(e){R[i]=''}}return R[i]}
+function romk(i){return rom(i).toLowerCase().replace(/[^a-z]/g,'')}
 function search(q){q=q.trim();var ql=q.toLowerCase(),qh=hira(q),qr=ql.replace(/[^a-z]/g,''),isLat=/^[a-z\s'-]+$/i.test(q),out=[];
- for(var i=0;i<D.length;i++){var w=D[i];if(LV&&w[4]!==LV)continue;var k=w[0],r=hira(w[1]||''),s=9;
+ for(var i=0;i<D.length;i++){var w=D[i],k=w[0],r=hira(w[1]||''),s=9;
   if(k===q||r===qh)s=0;else if(k.indexOf(q)===0||(r&&r.indexOf(qh)===0))s=1;else if(k.indexOf(q)>0||(qh.length>1&&r.indexOf(qh)>0))s=3;
-  if(isLat&&qr.length>1){var rr=rom(i);if(rr===qr)s=Math.min(s,0);else if(rr.indexOf(qr)===0)s=Math.min(s,2)}
-  if(s===9){if(w[2]&&w[2].indexOf(q)>-1)s=w[2].indexOf(q)===0?2:4;else if(isLat&&w[3]){var e=w[3].toLowerCase();var p=e.indexOf(ql);if(p>-1)s=(p===0||/\W/.test(e[p-1]))?(e===ql?1:3):5}}
+  if(isLat&&qr.length>1){var rr=romk(i);if(rr===qr)s=Math.min(s,0);else if(rr.indexOf(qr)===0)s=Math.min(s,2)}
+  if(s===9){if(w[2]&&w[2].indexOf(q)>-1)s=w[2].indexOf(q)===0?2:4;else if(isLat&&w[3]){var e=w[3].toLowerCase(),p=e.indexOf(ql);if(p>-1)s=(p===0||/\W/.test(e[p-1]))?(e===ql||e==='to '+ql?1:3):5}}
   if(s<9)out.push([s,k.length,i])}
  out.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});return out.map(function(x){return x[2]})}
-function daily(){var t=Math.floor((Date.now()+9*36e5)/864e5),a=[],seen={};var pool=[];for(var i=0;i<D.length;i++){if((!LV||D[i][4]===LV)&&D[i][4])pool.push(i)}for(var j=0;j<8&&pool.length;j++){var x=pool[(t*7919+j*104729)%pool.length];if(!seen[x]){seen[x]=1;a.push(x)}}return a}
-function card(i){var w=D[i],lv=w[4],r=w[1]&&w[1]!==w[0]?w[1]:'',rm=rom(i);
- return '<button class="dxi'+(OPEN===i?' open':'')+'" data-i="'+i+'"><span class="dxw"><b>'+es(w[0])+'</b><span class="dxrd">'+es(r)+(rm?(r?' · ':'')+rm:'')+'</span><span class="dxmm">'+es(w[2])+'</span>'+(w[3]?'<span class="dxe">'+es(w[3])+'</span>':'')+'</span>'+(lv?'<span class="dxb" style="background:'+LC[lv]+'">N'+lv+'</span>':'')+'<span class="dxs" role="button" tabindex="0" data-s="'+i+'" aria-label="Listen">🔊</span></button>'}
-function det(i){var w=D[i],r=w[1]&&w[1]!==w[0]?w[1]:'';return '<div class="dxd"><div class="dxrow"><span class="dxbig">'+es(w[0])+'</span><button class="dxs" data-s="'+i+'" aria-label="Listen">🔊</button>'+(w[4]?'<span class="dxb" style="background:'+LC[w[4]]+'">JLPT N'+w[4]+'</span>':'')+'</div>'+(r||rom(i)?'<div class="dxrow"><span class="dxchip">'+es(r||w[0])+'</span><span class="dxchip">'+es(rom(i))+'</span></div>':'')+'<div style="font-size:17px;line-height:1.8">'+es(w[2])+'</div>'+(w[3]?'<div style="color:#5A6680">'+es(w[3])+'</div>':'')+'<div style="font-size:12.5px;color:#6B7486;line-height:1.7">'+tl('ဥပမာစာကြောင်း၊ ကြိယာပုံစံ၊ ခန်းဂျိ ရေးနည်း စတာတွေကို Dokodemo app ထဲမှာ ကြည့်လို့ရပါတယ်။','例文・活用・書き順は Dokodemo アプリで見られます。','Examples, verb forms and stroke order are in the Dokodemo app.')+'</div></div>'}
+function daily(){var t=Math.floor((Date.now()+9*36e5)/864e5),a=[],pool=[];for(var i=0;i<D.length;i++){if(D[i][4]&&!D[i][5]&&D[i][0].length<=6)pool.push(i)}for(var j=0;j<8;j++)a.push(pool[(t*7919+j*104729)%pool.length]);return a}
+function favs(){try{return JSON.parse(localStorage.getItem('dxfav')||'[]')}catch(e){return []}}
+function setFav(k,on){var f=favs().filter(function(x){return x!==k});if(on)f.unshift(k);try{localStorage.setItem('dxfav',JSON.stringify(f.slice(0,200)))}catch(e){}}
+function row(i){var w=D[i],r=w[1]&&w[1]!==w[0]?w[1]:'';return '<button class="dxrw" data-i="'+i+'"><span class="zw"><b>'+es(w[0])+'</b><small>'+es(r)+(r?' · ':'')+es(rom(i))+'</small><span class="zm">'+es(w[2])+'</span></span><i>›</i></button>'}
 function paint(){var el=document.getElementById('dxr');if(!el)return;
- var lv='<button data-lv="0" class="'+(LV?'':'on')+'">All</button>'+[5,4,3,2,1].map(function(n){return '<button data-lv="'+n+'" class="'+(LV===n?'on':'')+'">N'+n+'</button>'}).join('');document.getElementById('dxlv').innerHTML=lv;
- if(!D){el.innerHTML='<div class="dxmsg">⏳ '+tl('အဘိဓာန် ဖွင့်နေပါတယ်…','辞書を読み込み中…','Loading dictionary…')+'</div>';return}
- var ids,head='';if(!Q.trim()){ids=daily();head='<div class="dxmsg" style="text-align:left;padding:12px 4px 0">🌟 '+tl('ယနေ့ စကားလုံး','今日の単語','Words of the day')+'</div><div class="dxhint">'+['食べる','sakura','ကျေးဇူး','beautiful','勉強'].map(function(x){return '<button data-h="'+es(x)+'">'+es(x)+'</button>'}).join('')+'</div>'}
- else{ids=search(Q);if(!ids.length){el.innerHTML='<div class="dxmsg">'+tl('မတွေ့ပါ — စာလုံးပေါင်း ပြန်စစ်ပါ (သို့) တိုတိုလေး ရှာကြည့်ပါ','見つかりません','No results — try a shorter word')+'</div>';return}head='<div class="dxmsg" style="text-align:left;padding:10px 4px 0">'+ids.length+' '+tl('ခု တွေ့ပါတယ်','件','results')+'</div>'}
- var h='';ids.slice(0,LIM).forEach(function(i){h+=card(i);if(OPEN===i)h+=det(i)});
- el.innerHTML=head+'<div class="dxres">'+h+'</div>'+(ids.length>LIM?'<button class="dxmore" id="dxm">'+tl('နောက်ထပ် ပြပါ','もっと見る','Show more')+' ('+(ids.length-LIM)+')</button>':'')}
-function say(i){try{var w=D[i],u=new SpeechSynthesisUtterance(w[1]||w[0]);u.lang='ja-JP';u.rate=.9;var v=speechSynthesis.getVoices().filter(function(x){return /ja/i.test(x.lang)})[0];if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+ if(!D){el.innerHTML='<div class="dxmsg">⏳ '+T('အဘိဓာန် ဖွင့်နေပါတယ်…','辞書を読み込み中…','Loading dictionary…')+'</div>';return}
+ var ids,head='';
+ if(!Q.trim()){ids=daily();var fv=favs().filter(function(k){return BYK[k]!==undefined}).slice(0,12);
+  head=(fv.length?'<div class="dxmsg" style="padding:12px 4px 0">🔖 '+T('သိမ်းထားတဲ့ စကားလုံး','保存した単語','Saved words')+'</div><div class="dxhint">'+fv.map(function(k){return '<button data-o="'+BYK[k]+'">'+es(k)+'</button>'}).join('')+'</div>':'')
+   +'<div class="dxmsg" style="padding:12px 4px 0">🌟 '+T('ယနေ့ စကားလုံး','今日の単語','Words of the day')+' · '+T('ရှာကြည့်ရန်','検索例','try')+': </div><div class="dxhint">'+['食べる','sakura','ကျေးဇူး','beautiful','勉強'].map(function(x){return '<button data-h="'+es(x)+'">'+es(x)+'</button>'}).join('')+'</div>'}
+ else{ids=search(Q);if(!ids.length){el.innerHTML='<div class="dxmsg">'+T('မတွေ့ပါ — စာလုံးပေါင်း ပြန်စစ်ပါ (သို့) တိုတိုလေး ရှာကြည့်ပါ','見つかりません','No results — try a shorter word')+'</div>';return}head='<div class="dxmsg" style="padding:10px 4px 0">'+ids.length+' '+T('ခု တွေ့ပါတယ်','件','results')+'</div>'}
+ el.innerHTML=head+'<div class="dxres">'+ids.slice(0,LIM).map(row).join('')+'</div>'+(ids.length>LIM?'<button class="dxmore" id="dxm">'+T('နောက်ထပ် ပြပါ','もっと見る','Show more')+' ('+(ids.length-LIM)+')</button>':'')}
+function say(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=.9;var v=speechSynthesis.getVoices().filter(function(x){return /ja/i.test(x.lang)})[0];if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+/* ---------- detail page ---------- */
+function obj(i){var w=D[i];return {k:w[0],r:w[1]||w[0],mm:w[2],en:w[3],lv:w[4],src:w[5]?'k':'w'}}
+function forms(i){try{return dzForms(obj(i))}catch(e){return null}}
+function stemsFor(i,fx){var w=D[i],s=[w[0]];if(w[1]&&w[1]!==w[0])s.push(w[1]);if(fx){fx.F.forEach(function(f){if(f.k&&f.k.length>=1)s.push(f.k)});var T0=fx.T;if(T0&&T0.t==='v'){var st=T0.g===1?T0.k.slice(0,-1):T0.g===2?T0.k.slice(0,-1):'';if(st&&st.length>=2)s.push(st)}if(T0&&T0.t==='i'&&T0.k.length>=2)s.push(T0.k.slice(0,-1))}
+ var u={};return s.filter(function(x){x=String(x);if(!x||u[x])return false;u[x]=1;return x.length>=1}).sort(function(a,b){return b.length-a.length})}
+function examples(i,fx){if(!SENT)return [];var w=D[i],st=stemsFor(i,fx),out=[],kana=!/[一-龯々]/.test(w[0]),minL=kana&&w[0].length<2?99:1;
+ for(var j=0;j<SENT.length&&out.length<40;j++){var s=SENT[j][0];for(var z=0;z<st.length;z++){var x=st[z];if(x.length<(kana?2:1))continue;var p=s.indexOf(x);if(p>-1){out.push([j,x]);break}}}
+ out.sort(function(a,b){return SENT[a[0]][0].length-SENT[b[0]][0].length});return out.slice(0,10)}
+function hl(s,x){var p=s.indexOf(x);if(p<0)return es(s);return es(s.slice(0,p))+'<em>'+es(x)+'</em>'+es(s.slice(p+x.length))}
+function kbig(k,id){var v=KVG&&KVG[k];if(!v)return '<div style="width:120px;height:120px;border-radius:14px;background:#fff;border:1px solid #E4DFD9;display:flex;align-items:center;justify-content:center;font-family:\'Noto Serif JP\',serif;font-size:72px">'+es(k)+'</div>';
+ return '<svg id="'+id+'" data-ka="'+id+'" viewBox="0 0 109 109" width="120" height="120" aria-label="'+es(k)+'"><rect x="1" y="1" width="107" height="107" rx="6" fill="#fff" stroke="#D5DCE8" stroke-width="1"/><path d="M54.5 4V105M4 54.5H105" stroke="#E3C9C6" stroke-width=".8" stroke-dasharray="3 3"/>'+v[0].map(function(d,n){return '<path class="kdp" d="'+d+'" fill="none" stroke="'+KD_COL[n%6]+'" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>'}).join('')+(v[1]||[]).map(function(p,n){return '<g class="kdn"><circle cx="'+(p[0]+2)+'" cy="'+(p[1]-3)+'" r="4.6" fill="#fff" stroke="#8A93A5" stroke-width=".6"/><text x="'+(p[0]+2)+'" y="'+(p[1]-.6)+'" text-anchor="middle" font-size="6.2" font-weight="700" fill="#4A5468">'+(n+1)+'</text></g>'}).join('')+'</svg>'}
+var KTOK=0;function kanim(id){var sv=document.getElementById(id);if(!sv)return;var ps=[].slice.call(sv.querySelectorAll('.kdp')),nn=[].slice.call(sv.querySelectorAll('.kdn')),t=150,tok=++KTOK;
+ ps.forEach(function(p){var L=p.getTotalLength();p.style.transition='none';p.style.strokeDasharray=L;p.style.strokeDashoffset=L});nn.forEach(function(n){n.style.opacity=0});
+ ps.forEach(function(p,n){var L=p.getTotalLength(),d=Math.max(300,L*8);setTimeout(function(){if(tok!==KTOK)return;p.getBoundingClientRect();p.style.transition='stroke-dashoffset '+d+'ms ease-in-out';p.style.strokeDashoffset=0;if(nn[n])nn[n].style.opacity=1},t);t+=d+180})}
+function related(i){var w=D[i],k=w[0],r=w[1]||w[0],fam=[],homo=[];if(k.length>=1){for(var j=0;j<D.length&&fam.length<24;j++){if(j===i)continue;var x=D[j][0];if(x!==k&&x.indexOf(k)>-1&&(k.length>=2||/[一-龯々]/.test(k)))fam.push(j)}}
+ for(var j2=0;j2<D.length&&homo.length<8;j2++){if(j2!==i&&(D[j2][1]||D[j2][0])===r&&D[j2][0]!==k)homo.push(j2)}return {fam:fam,homo:homo}}
+function chipFor(k,cls){var j=BYK[k];return j!==undefined?'<button class="zcp'+(cls||'')+'" data-o="'+j+'">'+es(k)+'</button>':'<span class="zcp zg" style="cursor:default">'+es(k)+'</span>'}
+function notes(i,fx){var w=D[i],n=[],T0=fx&&fx.T;
+ if(T0&&T0.t==='v'){var g=T0.g,mas=(fx.F.filter(function(f){return f.lab[1]==='ます形'})[0]||{}).k,te=(fx.F.filter(function(f){return f.lab[1]==='て形'})[0]||{}).k,nai=(fx.F.filter(function(f){return f.lab[1]==='ない形'})[0]||{}).k;
+  n.push(T('<b>ကြိယာ အုပ်စု '+['','၁ (Ⅰ)','၂ (Ⅱ)','၃ (Ⅲ)'][g]+'</b> — '+['','နောက်ဆုံး う-row ကို い-row ပြောင်းပြီး ます ထည့်','る ကို ဖြုတ်ပြီး ます ထည့်','する → します、来る → 来ます (စည်းမျဉ်းမလိုက်)'][g],'<b>'+['','Ⅰグループ（五段）','Ⅱグループ（一段）','Ⅲグループ（不規則）'][g]+'の動詞</b>','<b>Group '+['','I (godan)','II (ichidan)','III (irregular)'][g]+' verb</b>'));
+  if(mas)n.push('<b>'+es(T0.k)+'</b> → '+es(mas)+(te?' · '+es(te):'')+(nai?' · '+es(nai):''));
+  if(g===1&&/る$/.test(T0.r))n.push(T('る နဲ့ ဆုံးပေမဲ့ <b>အုပ်စု ၁</b> ပါ — 〜ります ဖြစ်ပါတယ် (〜ます မဟုတ်)','「る」で終わるがⅠグループ（〜ります）','Ends in る but is Group I (→ 〜ります)'))}
+ if(T0&&T0.t==='i')n.push(T('<b>い-နာမဝိသေသန</b> — အငြင်း: い → くない ('+es(T0.k.slice(0,-1))+'くない) · အတိတ်: い → かった','<b>い形容詞</b>：否定は「くない」、過去は「かった」','<b>i-adjective</b>: negative い→くない, past い→かった'));
+ if(T0&&T0.t==='na')n.push(T('<b>な-နာမဝိသေသန</b> — နာမ်ရှေ့မှာ <b>な</b> ထည့်ပါ: '+es(T0.k)+'な + နာမ် · '+es(T0.k)+'です','<b>な形容詞</b>：名詞の前は「な」','<b>na-adjective</b>: add な before a noun'));
+ if(/する$/.test(w[0])&&w[0].length>2)n.push(T('နာမ် + <b>する</b> = ကြိယာ · '+es(w[0].replace(/する$/,''))+' (နာမ်) ကိုလည်း သုံးလို့ရ','名詞＋する動詞','noun + する verb'));
+ if(/^[ァ-ヶー・]+$/.test(w[0]))n.push(T('<b>ကာတာကာနာ</b> စကားလုံး — နိုင်ငံခြား (အင်္ဂလိပ် စသည်) က ဝင်လာတဲ့ စကား','カタカナ語（外来語）','Katakana loanword'));
+ if(w[5])n.push(T('ဒါက <b>ခန်းဂျိ တစ်လုံးတည်း</b>ပါ — ဖတ်နည်းက စကားလုံးပေါ် မူတည်ပြီး ပြောင်းတတ်ပါတယ်','漢字一字の見出し。読み方は語によって変わる','Single kanji — the reading changes by word'));
+ return n}
+function open(i,push){if(push!==false&&window.__dxCur!==undefined&&window.__dxCur!==i)STACK.push(window.__dxCur);window.__dxCur=i;var w=D[i],fx=forms(i),r=w[1]&&w[1]!==w[0]?w[1]:'',fav=favs().indexOf(w[0])>-1;
+ var pg=document.getElementById('dxp');if(!pg){pg=document.createElement('div');pg.id='dxp';pg.className='dxp';document.body.appendChild(pg);pg.addEventListener('click',onP);requestAnimationFrame(function(){pg.classList.add('zon')});document.documentElement.style.overflow='hidden'}
+ var pos=fx?T.apply(null,fx.tag):(w[5]?T('ခန်းဂျိ','漢字','kanji'):(/[ 　]|[をにがでへと]/.test(w[0])&&w[0].length>4?T('စကားစု','フレーズ','phrase'):''));
+ var senses=String(w[2]).split(/\s*[၊;]\s*/).filter(Boolean);
+ var h='<div class="ztb"><button class="zcb zbk" data-a="back" aria-label="Back">‹</button><span class="ztt">'+es(w[0])+'</span><button class="zcb'+(fav?' zon':'')+'" data-a="fav" aria-label="Save">🔖</button><button class="zcb" data-a="say" aria-label="Listen">🔊</button><button class="zcb" data-a="share" aria-label="Share">↗</button></div><div class="zin">';
+ h+='<div class="zhero"><div class="zhw">'+es(w[0])+'</div><div class="zpr"><b>'+T('ဖတ်နည်း','よみ','READING')+'</b><span>'+es(r||w[0])+'</span><b>ROMAJI</b><span style="font-family:inherit">/'+es(rom(i))+'/</span><button data-a="say" aria-label="Listen">🔊</button></div><div class="chs">'+(pos?'<span class="zch">'+es(pos)+'</span>':'')+(w[4]?'<span class="zch zlv" style="background:'+LC[w[4]]+'">JLPT N'+w[4]+'</span>':'')+'</div><div class="zsm">'+es(senses.join(' • '))+'</div>'+(w[3]?'<div class="zen0">'+es(w[3])+'</div>':'')+'</div>';
+ h+='<div class="zcd"><div class="zct"><span class="zn">1</span><span class="zl">'+T('အဓိပ္ပာယ်','意味','Meaning')+'</span>'+(pos?'<span class="ztg">'+es(pos)+'</span>':'')+'</div>'+senses.map(function(s,n){return '<div class="zms">'+(senses.length>1?(n+1)+'. ':'')+es(s)+'</div>'}).join('')+(w[3]?'<div style="font-size:16px;margin-top:6px;color:#4A403A">'+es(w[3])+'</div>':'')+'</div>';
+ h+='<div class="zcd" id="dxex"><div class="zct"><span class="zn">2</span><span class="zl">'+T('ဥပမာ စာကြောင်း','例文','Examples')+'</span></div><div class="zft">⏳</div></div>';
+ if(fx){var secs=[];fx.F.forEach(function(f){if(secs.indexOf(f.sec)<0)secs.push(f.sec)});var L=lg()==='ja'?1:lg()==='en'?2:0;
+  h+='<div class="zcd"><div class="zct"><span class="zn">3</span><span class="zl">'+T('သဒ္ဒါပုံစံ အားလုံး','活用形 一覧','All grammar forms')+'</span><span class="ztg">'+es(T.apply(null,fx.tag))+'</span></div><div class="zfs">'+secs.map(function(sec){return '<div><div class="zfsh">'+es(sec)+'</div><div class="zfg" style="margin-top:8px">'+fx.F.filter(function(f){return f.sec===sec}).map(function(f){return '<button class="zfb" data-s="'+es(f.r)+'"><small>'+es(f.lab[L])+'</small><b>'+es(f.k)+'</b>'+(f.k!==f.r?'<span>'+es(f.r)+'</span>':'')+'</button>'}).join('')+'</div></div>'}).join('')+'</div></div>'}
+ var ks=[];Array.from(w[0]).forEach(function(c){if(/[一-龯々]/.test(c)&&ks.indexOf(c)<0)ks.push(c)});
+ if(ks.length)h+='<div class="zcd" id="dxkj"><div class="zct"><span class="zn">'+(fx?4:3)+'</span><span class="zl">'+T('ခန်းဂျိ · ရေးနည်း','漢字・書き順','Kanji · stroke order')+'</span><span class="ztg">'+T('ပုံကို နှိပ်ရင် ပြန်ရေးပြ','タップで再生','tap to replay')+'</span></div><div class="zft">⏳</div></div>';
+ var syn=(SYN[w[0]]||[]),ant=(ANTI[w[0]]||[]);
+ if(syn.length||ant.length)h+='<div class="zcd"><div class="zct"><span class="zl">'+T('အဓိပ္ပာယ်တူ · ဆန့်ကျင်ဘက်','類義語・反対語','Synonyms · Antonyms')+'</span></div><div class="zchips">'+(syn.length?'<span class="zcp zg" style="cursor:default">'+T('အဓိပ္ပာယ်တူ','類義語','Synonyms')+':</span>'+syn.map(function(x){return chipFor(x)}).join(''):'')+(ant.length?'<span class="zcp zg" style="cursor:default">'+T('ဆန့်ကျင်ဘက်','反対語','Antonyms')+':</span>'+ant.map(function(x){return chipFor(x)}).join(''):'')+'</div></div>';
+ var rel=related(i);
+ if(rel.fam.length||rel.homo.length)h+='<div class="zcd"><div class="zct"><span class="zl">'+T('ဆက်စပ် စကားလုံး','関連語','Word family')+'</span></div>'+rel.fam.map(function(j){var x=D[j];return '<button class="zwf" data-o="'+j+'"><b>'+es(x[0])+'</b><i>'+es(x[1]&&x[1]!==x[0]?x[1]:'')+'</i><span>'+es(x[2])+'</span></button>'}).join('')+(rel.homo.length?'<div class="zfsh" style="margin:12px 0 6px">'+T('အသံတူ စကားလုံး','同音語','Same reading')+'</div><div class="zchips">'+rel.homo.map(function(j){return '<button class="zcp" data-o="'+j+'">'+es(D[j][0])+'</button>'}).join('')+'</div>':'')+'</div>';
+ var nt=notes(i,fx);if(nt.length)h+='<div class="zcd znote"><div class="zct"><span class="zl" style="color:#9A4524">🇲🇲 '+T('မြန်မာ လေ့လာသူ မှတ်စု','ミャンマー人学習者メモ','Burmese learner note')+'</span></div><ul>'+nt.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>';
+ h+='<div class="zft">Dok●demo '+T('အဘိဓာန်','辞書','Dictionary')+' · dokodemonihongo.com</div></div>';
+ pg.innerHTML=h;pg.scrollTop=0;say(r||w[0]);
+ loadSent().then(function(){if(window.__dxCur!==i)return;var ex=examples(i,fx),el=document.getElementById('dxex');if(!el)return;
+  el.innerHTML='<div class="zct"><span class="zn">2</span><span class="zl">'+T('ဥပမာ စာကြောင်း','例文','Examples')+'</span><span class="ztg">'+T('နှိပ်ရင် အသံထွက်','タップで発音','tap to hear')+'</span></div>'+(ex.length?ex.map(function(e){var s=SENT[e[0]];return '<div class="zex" data-s="'+es(s[0])+'"><div class="zj">'+hl(s[0],e[1])+'</div><div class="zm">'+es(s[1])+'</div>'+(s[2]?'<div class="ze">'+es(s[2])+'</div>':'')+'</div>'}).join(''):'<div class="zft">'+T('ဥပမာ စာကြောင်း မရှိသေးပါ','例文はまだありません','No examples yet')+'</div>')});
+ if(ks.length)Promise.all([loadKanji(),loadKvg()]).then(function(){if(window.__dxCur!==i)return;var el=document.getElementById('dxkj');if(!el)return;
+  el.innerHTML=el.querySelector('.zct').outerHTML+ks.map(function(c,n){var K=KJ[c]||[],uses=[];for(var j=0;j<D.length&&uses.length<12;j++){if(j!==i&&D[j][0].indexOf(c)>-1&&D[j][0].length<=4&&!D[j][5])uses.push(j)}
+   return '<div class="zkj">'+kbig(c,'dxk'+n)+'<div class="zkji"><div class="zbig">'+es(c)+(K[6]?' <span class="zch zlv" style="background:'+LC[K[6]]+';font-size:11px;vertical-align:middle">N'+K[6]+'</span>':'')+'</div>'+(K.length?'<div class="zr"><b>'+T('ချက်','画数','Strokes')+'</b><span>'+K[0]+'</span></div><div class="zr"><b>音</b><span>'+es(K[1])+'</span></div><div class="zr"><b>訓</b><span>'+es(K[2])+'</span></div><div class="zr"><b>'+T('အဓိပ္ပာယ်','意味','Meaning')+'</b><span>'+es(K[3])+(K[4]?' · '+es(K[4]):'')+'</span></div>'+(K[5]?'<div class="zr"><b>'+T('ရက်ဒီကယ်','部首','Radical')+'</b><span>'+es(K[5])+'</span></div>':''):'')+(uses.length?'<div class="zchips" style="margin-top:6px">'+uses.map(function(j){return '<button class="zcp" style="padding:5px 12px;font-size:14px" data-o="'+j+'">'+es(D[j][0])+'</button>'}).join('')+'</div>':'')+'</div></div>'}).join('');
+  ks.forEach(function(c,n){setTimeout(function(){kanim('dxk'+n)},200+n*400)})})}
+function close(){var pg=document.getElementById('dxp');if(!pg)return;pg.classList.remove('zon');setTimeout(function(){pg.remove()},220);document.documentElement.style.overflow='';STACK=[];window.__dxCur=undefined}
+function onP(e){var t=e.target,a=t.closest('[data-a]'),o=t.closest('[data-o]'),s=t.closest('[data-s]'),k=t.closest('[data-ka]');var i=window.__dxCur,w=D[i];
+ if(a){var x=a.dataset.a;if(x==='back'){if(STACK.length){open(STACK.pop(),false)}else close()}else if(x==='say')say(w[1]||w[0]);else if(x==='fav'){var on=favs().indexOf(w[0])<0;setFav(w[0],on);a.classList.toggle('zon',on)}else if(x==='share'){var tx=w[0]+(w[1]&&w[1]!==w[0]?'（'+w[1]+'）':'')+' — '+w[2]+(w[3]?' / '+w[3]:'')+'\nDok●demo Dictionary · https://dokodemonihongo.com/#dict';try{if(navigator.share){navigator.share({text:tx}).catch(function(){});return}}catch(er){}try{navigator.clipboard.writeText(tx)}catch(er){}a.textContent='✓';setTimeout(function(){a.textContent='↗'},1200)}return}
+ if(o){open(+o.dataset.o);return}if(k){kanim(k.dataset.ka);return}if(s){say(s.dataset.s);return}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('dxp'))close()});
 var q=document.getElementById('dxq'),tm=0;
-function go(){load().then(paint,function(){var el=document.getElementById('dxr');if(el)el.innerHTML='<div class="dxmsg">❌ '+tl('ဖွင့်လို့ မရပါ — internet စစ်ပြီး ပြန်စမ်းပါ','読み込めませんでした','Could not load — check internet')+'</div>'})}
-q.addEventListener('focus',go);q.addEventListener('input',function(){clearTimeout(tm);tm=setTimeout(function(){Q=q.value;LIM=40;OPEN=-1;go()},180)});
-document.getElementById('dxx').addEventListener('click',function(){q.value='';Q='';OPEN=-1;paint();q.focus()});
-document.getElementById('dict').addEventListener('click',function(e){var t=e.target;var s=t.closest('[data-s]');if(s){e.stopPropagation();say(+s.dataset.s);return}
- var b=t.closest('[data-lv]');if(b){LV=+b.dataset.lv;OPEN=-1;LIM=40;go();return}
- var h=t.closest('[data-h]');if(h){q.value=h.dataset.h;Q=q.value;OPEN=-1;go();return}
- if(t.id==='dxm'){LIM+=40;paint();return}
- var it=t.closest('.dxi');if(it){var i=+it.dataset.i;OPEN=OPEN===i?-1:i;paint();say(i)}});
+function go(){return load().then(paint,function(){var el=document.getElementById('dxr');if(el)el.innerHTML='<div class="dxmsg">❌ '+T('ဖွင့်လို့ မရပါ — internet စစ်ပြီး ပြန်စမ်းပါ','読み込めませんでした','Could not load — check internet')+'</div>'})}
+q.addEventListener('focus',go);q.addEventListener('input',function(){clearTimeout(tm);tm=setTimeout(function(){Q=q.value;LIM=30;go()},180)});
+q.addEventListener('keydown',function(e){if(e.key==='Enter'&&D){var ids=search(q.value);if(ids.length)open(ids[0])}});
+document.getElementById('dxx').addEventListener('click',function(){q.value='';Q='';paint();q.focus()});
+document.getElementById('dict').addEventListener('click',function(e){var t=e.target;var h=t.closest('[data-h]');if(h){q.value=h.dataset.h;Q=q.value;go();return}
+ var o=t.closest('[data-o]');if(o){open(+o.dataset.o);return}if(t.id==='dxm'){LIM+=30;paint();return}var it=t.closest('.dxrw');if(it){open(+it.dataset.i)}});
 try{new IntersectionObserver(function(en,ob){if(en[0].isIntersecting){go();ob.disconnect()}},{rootMargin:'300px'}).observe(document.getElementById('dict'))}catch(e){go()}
-document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setTimeout(paint,0)})});
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setTimeout(function(){paint();if(window.__dxCur!==undefined)open(window.__dxCur,false)},0)})});
+window.dxOpenWord=function(k){load().then(function(){var j=BYK[k];if(j!==undefined)open(j)})};
 paint();
 })();
 </script>
