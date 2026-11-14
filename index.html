@@ -2834,8 +2834,10 @@ function jlptNext(){const n=new Date();n.setHours(0,0,0,0);for(const d of JLPT_D
 function jlptMsg(){const j=jlptNext();if(!j)return '';if(j.k===0)return T('📝 ဒီနေ့ JLPT စာမေးပွဲနေ့! 頑張って 💪','📝 今日はJLPT本番！頑張って 💪','📝 JLPT is today! Good luck 💪');if(j.k===1)return T('📝 မနက်ဖြန် JLPT! စောစော အိပ်ပါ၊ 受験票 မမေ့နဲ့ 😊','📝 明日はJLPT！受験票を忘れずに、早く寝ましょう 😊','📝 JLPT is tomorrow! Don’t forget your admission ticket 😊');
   return T(`📝 JLPT (၂၀၂၆ ဒီဇင်ဘာ ၆ · တနင်္ဂနွေ) အထိ နောက် ${mmN(j.k)} ရက်`,`📝 JLPT（2026年12月6日・日）まで あと${j.k}日`,`📝 ${j.k} days until the JLPT (Sun, Dec 6, 2026)`)}
 
+/* Birthday ovada of the Rector Sayadaw (9.11.2026) — shown in the running marquee (app Home + website). Replace the text to update. */
+function bdOv(){return T('🙏 မွေးနေ့ ဩဝါဒ —「ကိုယ်ကျင့်သီလသည် ဘဝ၏ အလှ ဖြစ်သည်။ ပညာသည် ဘဝ၏ ရတနာ ဖြစ်သည်။ အလှအပကိုထိန်းသိမ်း၍ ရတနာကို မြတ်နိုးပါ။」— ပါမောက္ခချုပ်ဆရာတော် (၉ . ၁၁ . ၂၀၂၆)','🙏 お誕生日の教え —「戒（シーラ）は人生の美しさ。智慧は人生の宝。美しさを守り、宝を大切にしなさい。」— 学長サヤドー（2026年11月9日）','🙏 Birthday ovāda —"Morality is the beauty of life. Wisdom is the treasure of life. Keep the beauty and cherish the treasure." — the Rector Sayadaw (9 Nov 2026)')}
 function homeMarq(){const g=greetMsg(),m=sbMsg();let mo='';try{const d=new Date(),x=mmDay(d.getFullYear(),d.getMonth()+1,d.getDate());if(x){const t=mmText(x);mo=`　${moonSVG(moonP(x),22)} ${T(t[0],t[1],t[2])}`}}catch(e){}
-  const jm=(typeof jlptMsg==='function')?jlptMsg():'';const ps=playSoonMsg();return g+mo+(ps?'　　'+ps:'')+(jm?'　　'+jm:'')+(m?'　　'+m:'')}
+  const jm=(typeof jlptMsg==='function')?jlptMsg():'';const ps=playSoonMsg();const bo=(typeof bdOv==='function')?bdOv():'';return g+mo+(bo?'　　'+bo:'')+(ps?'　　'+ps:'')+(jm?'　　'+jm:'')+(m?'　　'+m:'')}
 
 function draw(){var el=document.getElementById('mqt');if(!el)return;var h='';try{h=homeMarq()}catch(e){h=''}
   h=h.replace(/Dokodemo/g,'Dok<span class="sun"></span>demo');el.innerHTML=h;
