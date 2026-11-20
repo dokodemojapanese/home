@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" href="https://dokodemojapanese.github.io/apple-touch-icon.png">
 <script>
 /* App links (?ref= ?dq= ?tab= …) belong to the app */
-(function(){var q=location.search;if(/[?&](ref|dq|tab|src|migrate)=/.test(q)||/#migrate=/.test(location.hash)){location.replace('https://dokodemojapanese.github.io/'+q+location.hash)}})();
+(function(){var q=location.search;if(/[?&](ref|dq|tab|src|migrate)=/.test(q)||/#migrate=/.test(location.hash)){location.replace(((/[?&]migrate=/.test(q)||/#migrate=/.test(location.hash))?'https://dokodemojapanese.github.io/':'/app.html')+q+location.hash)}})();
 </script>
 <style>
 :root{--navy:#14223D;--navy2:#1F3A68;--red:#E3262B;--gold:#FFD21F;--bg:#F5F7FC;--ink:#14223D;--mute:#5B6578}
@@ -3194,9 +3194,9 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c
 html.apopen,html.apopen body{overflow:hidden}
 </style>
 <script>
-/* Learn inside dokodemonihongo.com: the app opens in this page (no download, no leaving the site) */
+/* Learn inside dokodemonihongo.com: the app opens at dokodemonihongo.com/app.html (stays on this domain) */
 (function(){
-var APP='https://dokodemojapanese.github.io/';
+var APP='/app.html';
 function LG(){return (document.body.className.match(/l-(\w+)/)||[])[1]||'my'}
 function url(k,el){var q='?embed=1&src=web&hl='+LG();
   if(k==='lv'){var n=(document.getElementById('golv').textContent||'N5').replace('N','');q+='&tab=words&jl='+n}

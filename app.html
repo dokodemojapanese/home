@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F3F5F9">
+<title>Dokodemo – どこでも日本語</title>
+<link rel="icon" href="https://dokodemojapanese.github.io/icon-192.png">
+<link rel="apple-touch-icon" href="https://dokodemojapanese.github.io/apple-touch-icon.png">
+<style>
+html,body{margin:0;height:100%;background:#F3F5F9;font-family:system-ui,-apple-system,"Noto Sans Myanmar","Myanmar Text",sans-serif}
+#ld{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#14223D}
+#ld b{font-size:34px;font-weight:900;letter-spacing:.5px}
+#ld b i{display:inline-block;width:.62em;height:.62em;border-radius:50%;background:#D93A2E;vertical-align:.02em;margin:0 .03em}
+#ld small{color:#5B6578;font-size:15px}
+#ld .sp{width:34px;height:34px;border-radius:50%;border:4px solid #DCE3EE;border-top-color:#1E6FD9;animation:r 1s linear infinite}
+@keyframes r{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div id="ld"><b>Dok<i></i>demo</b><small>どこでも日本語</small><div class="sp"></div><small id="lt">ခဏစောင့်ပါ…</small></div>
+<script>
+/* dokodemonihongo.com/app — runs the Dokodemo app on this domain (no jump to github.io).
+   The app page is fetched from dokodemojapanese.github.io (always the latest version) and
+   drawn here; its files (dict.json, config.json …) keep loading from github.io. */
+(function(){
+  var A='https://dokodemojapanese.github.io/';
+  function fail(){location.replace(A+location.search+location.hash)}
+  /* the app uses <base> = github.io, so make history URLs resolve against THIS page */
+  ['pushState','replaceState'].forEach(function(k){
+    var o=history[k].bind(history);
+    history[k]=function(s,t,u){if(u!=null&&u!==''){try{u=new URL(String(u),location.href).href}catch(e){}}return o(s,t,u)};
+  });
+  function links(){
+    /* links like href="#x" or "?x" stay on this page */
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(/^[#?]/.test(h)){e.preventDefault();location.href=new URL(h,location.href).href}
+  },true);
+  }
+  var tm=setTimeout(function(){var t=document.getElementById('lt');if(t)t.textContent='Internet နှေးနေပါတယ်… ခဏစောင့်ပါ'},8000);
+  fetch(A+'index.html',{cache:'no-cache'}).then(function(r){
+    if(!r.ok)throw new Error(r.status);return r.text();
+  }).then(function(h){
+    if(h.length<100000||h.indexOf('<head')<0)throw new Error('bad page');
+    clearTimeout(tm);
+    h=h.replace(/<head([^>]*)>/i,'<head$1><base href="'+A+'">');
+    document.open();document.write(h);document.close();
+    links();
+  }).catch(fail);
+})();
+</script>
+</body>
+</html>
